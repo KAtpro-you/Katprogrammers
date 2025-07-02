@@ -210,6 +210,27 @@
             display: none;
             margin-top: 10px;
         }
+        /* Ensure Google button matches existing style */
+        .g_id_signin div[role=button] {
+            width: 60%;
+            height: 0.7cm;
+            font-size: 100%;
+            margin-top: 5%;
+            margin-left: 20%;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .g_id_signin div[role=button]:hover {
+            background-color: rgb(175, 180, 184);
+            box-shadow: none;
+            transition: 0.3s;
+        }
 
         /* Media Queries */
         @media (max-width: 720px) {
@@ -224,7 +245,7 @@
                 font-size: 20px;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
-            .set2 a button {
+            .set2 a button, .set2 .g_id_signin div[role=button] {
                 width: 100%;
                 height: 0.7cm;
                 margin-top: 5%;
@@ -272,7 +293,7 @@
                 text-align: center;
                 font-size: 8px;
             }
-            .set2 .button1 {
+            .set2 .button1, .set2 .g_id_signin div[role=button] {
                 background-color: aliceblue;
             }
             .set2 .button2 {
@@ -283,7 +304,7 @@
                 background-color: rgb(0, 0, 0);
                 color: aliceblue;
             }
-            .set2 .button1:hover {
+            .set2 .button1:hover, .set2 .g_id_signin div[role=button]:hover {
                 background-color: rgb(180, 186, 190);
                 box-shadow: none;
             }
@@ -334,7 +355,7 @@
                 <input type="submit" value="SIGN UP" class="login">
                 <h4>or</h4>
                 <h3>Sign Up with :</h3>
-                <a href="#"><button type="button" class="button1"><i class="fa-brands fa-google"></i> Google account</button></a>
+                <div class="g_id_signin" data-type="standard" data-text="signup_with"></div>
                 <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
                 <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
             </fieldset>
@@ -377,14 +398,50 @@
         <h4>or</h4>
         <fieldset class="set2">
             <h3>Log in with :</h3>
-            <a href="#"><button type="button" class="button1"><i class="fa-brands fa-google"></i> Google account</button></a>
+            <div class="g_id_signin" data-type="standard" data-text="signin_with"></div>
             <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
             <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
         </fieldset>
         <h6>© 2025 Kat Programmers, All Rights Reserved.</h6>
     </form>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
+        // Google Sign-In initialization
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // TODO: Send response.credential to your backend for verification
+            // Example: Redirect to home.html after successful sign-in
+            window.location.href = "home.html";
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: '1082724905494-obn6lqt1elqmurbjbpd8i9fdjtpcm8ps.apps.googleusercontent.com', // Replace with your Google Client ID
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.querySelector(".set2 .g_id_signin"),
+                { 
+                    type: "standard",
+                    theme: "outline",
+                    size: "large",
+                    text: "signin_with",
+                    shape: "rectangular"
+                }
+            );
+            google.accounts.id.renderButton(
+                document.querySelector(".form21 .g_id_signin"),
+                { 
+                    type: "standard",
+                    theme: "outline",
+                    size: "large",
+                    text: "signup_with",
+                    shape: "rectangular"
+                }
+            );
+        };
+
+        // Existing form toggle functions
         function openform() {
             document.getElementById("form2").style.display = "block";
         }
@@ -393,6 +450,7 @@
             document.getElementById("form2").style.display = "none";
         }
 
+        // Existing local credential validation
         const validCredentials = [
             { username: "arsene", password: "arsene" },
             { username: "donald", password: "donald" },
@@ -417,7 +475,5 @@
             }
         });
     </script>
-  
-
 </body>
 </html>
