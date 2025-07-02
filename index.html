@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kat-Programmers Log in</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        form {
+            width: 25%;
+            font-size: 70%;
+            position: fixed;
+            right: 0;
+            bottom: 5%;
+            height: 80%;
+            text-align: center;
+        }
+        header {
+            position: fixed;
+            background-color: rgb(4, 4, 209);
+            padding: 0;
+            width: 100%;
+            top: 0;
+            left: 0;
+            font-size: 60%;
+            text-align: center;
+        }
+        header p {
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header h1 {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(255, 242, 0);
+        }
+        h6 {
+            color: aliceblue;
+        }
+        input {
+            font-size: 10px;
+            background-color: black;
+            border: none;
+            color: aliceblue;
+            width: 90%;
+            height: 0.8cm;
+            margin-top: 5%;
+            border-radius: 5px;
+        }
+        input:focus {
+            padding: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        form h4 {
+            color: darkgray;
+        }
+        fieldset {
+            font-size: 10px;
+            height: auto;
+            width: 90%;
+            border-radius: 10px;
+            background-color: rgba(37, 37, 37, 0.637);
+            color: aliceblue;
+            border-color: rgb(0, 0, 0);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow: 0px 0px 5px 5px rgb(1, 1, 66);
+        }
+        .set1 a {
+            color: gold;
+            text-decoration: none;
+        }
+        .set1 a:hover {
+            color: darkgoldenrod;
+        }
+        .set1 a button {
+            width: 32%;
+            cursor: pointer;
+            height: 0.7cm;
+            border-radius: 5px;
+            border: none;
+            font-size: 100%;
+        }
+        .set2 a button {
+            width: 60%;
+            height: 0.7cm;
+            font-size: 100%;
+            margin-top: 5%;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        .button1 {
+            background-color: aliceblue;
+        }
+        .button2 {
+            background-color: rgb(0, 136, 255);
+            color: aliceblue;
+        }
+        .button3 {
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+        }
+        .button1:hover {
+            background-color: rgb(175, 180, 184);
+            box-shadow: none;
+            transition: 0.3s;
+        }
+        .button2:hover {
+            background-color: rgb(0, 101, 189);
+            color: rgb(184, 190, 196);
+            transition: 0.3s;
+        }
+        .button3:hover {
+            color: rgb(191, 197, 202);
+            transition: 0.3s;
+        }
+        .set1 .login {
+            background-image: linear-gradient(45deg, green, rgb(255, 208, 0));
+            color: black;
+            font-weight: bolder;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: none;
+        }
+        .login:hover {
+            background-image: linear-gradient(45deg, rgb(1, 87, 1), rgb(151, 136, 1));
+            color: rgb(0, 0, 0);
+            transition: 0.3s;
+        }
+        .video {
+            display: flex;
+            position: fixed;
+            z-index: -10;
+        }
+        video {
+            height: 100%;
+            width: 100%;
+            z-index: -10;
+        }
+        .tran {
+            background-color: rgba(0, 0, 0, 0.826);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            text-align: center;
+            color: aliceblue;
+        }
+        .tran div h2 {
+            margin-top: 3cm;
+        }
+        .tran div {
+            width: 70%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        footer {
+            width: 100%;
+            color: rgb(215, 215, 215);
+        }
+        .div1 {
+            width: 100%;
+            font-size: 70%;
+        }
+        div li {
+            display: inline-flex;
+        }
+        li a {
+            color: rgb(184, 172, 157);
+            text-decoration: solid;
+            margin-right: 3%;
+        }
+        .tran button {
+            background-image: linear-gradient(45deg, blue, rgb(255, 0, 217));
+            height: 1cm;
+            width: 30%;
+            color: aliceblue;
+            border: none;
+            border-radius: 10px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .tran button:hover {
+            box-shadow: 0px 0px 7px 7px blue;
+            transition: 0.3s ease;
+        }
+        .form2 {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.84);
+            text-align: center;
+        }
+        .form21 {
+            width: 30%;
+            margin-left: 35%;
+            z-index: 10000;
+        }
+        .error {
+            color: red;
+            font-size: 10px;
+            display: none;
+            margin-top: 10px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 720px) {
+            header {
+                padding: 1%;
+                text-align: center;
+                width: 100%;
+                position: relative;
+                background-color: transparent;
+            }
+            header h1 {
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .set2 a button {
+                width: 100%;
+                height: 0.7cm;
+                margin-top: 5%;
+                cursor: pointer;
+                border-radius: 5px;
+                border: none;
+            }
+            fieldset {
+                font-size: 90%;
+                width: auto;
+                background-color: rgb(36, 36, 36);
+                border-radius: 10px;
+                color: aliceblue;
+                box-shadow: 0px 0px 5px 5px rgba(172, 172, 172, 0.553);
+            }
+            fieldset h3 {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .set1 p {
+                font-size: 12px;
+            }
+            .set1 input {
+                width: 97%;
+                margin-top: 5%;
+                height: 0.7cm;
+                font-size: 90%;
+            }
+            .set1:focus {
+                border-color: rgb(30, 255, 0);
+                border: none;
+            }
+            input {
+                box-shadow: none;
+            }
+            input:focus {
+                padding: none;
+            }
+            form {
+                width: 100%;
+                position: relative;
+                text-align: center;
+                font-size: 90%;
+            }
+            h6 {
+                text-align: center;
+                font-size: 8px;
+            }
+            .set2 .button1 {
+                background-color: aliceblue;
+            }
+            .set2 .button2 {
+                background-color: rgb(0, 136, 255);
+                color: aliceblue;
+            }
+            .set2 .button3 {
+                background-color: rgb(0, 0, 0);
+                color: aliceblue;
+            }
+            .set2 .button1:hover {
+                background-color: rgb(180, 186, 190);
+                box-shadow: none;
+            }
+            .set2 .button2:hover {
+                background-color: rgb(0, 101, 189);
+                color: rgb(184, 190, 196);
+            }
+            .set2 .button3:hover {
+                color: rgb(191, 197, 202);
+            }
+            .set1 .login {
+                color: rgb(0, 0, 0);
+                font-weight: bolder;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .video video {
+                display: none;
+            }
+            .tran {
+                display: none;
+            }
+            .form21 {
+                width: 100%;
+                position: relative;
+                margin: 0%;
+                font-size: 70%;
+                margin-top: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form2" id="form2" style="display: none;">
+        <p style="position: fixed; color: aliceblue; top: 4%; right: 5%; cursor: pointer;" onclick="closeform()">X</p>
+        <div class="form21">
+            <fieldset class="set1">
+                <h3 style="background-image: linear-gradient(45deg, blue, rgb(255, 0, 217) 60%); color: transparent; -webkit-background-clip: text;">SIGN UP for free</h3>
+                <input type="text" name="" id="" placeholder="First name">
+                <input type="text" name="" id="" placeholder="Last name">
+                <input type="date" name="" id="" placeholder="Birth date">
+                <input type="email" name="" id="" placeholder="E-mail">
+                <input type="text" name="Username" id="" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="" id="" placeholder="Confirm Password">
+                <input type="submit" value="SIGN UP" class="login">
+                <h4>or</h4>
+                <h3>Sign Up with :</h3>
+                <a href="#"><button type="button" class="button1"><i class="fa-brands fa-google"></i> Google account</button></a>
+                <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
+                <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
+            </fieldset>
+        </div>
+    </div>
+    <header>
+        <h1>Kat-Programmers</h1>
+        <p>Free online courses</p>
+    </header>
+    <div class="tran">
+        <div>
+            <h2>Welcome</h2>
+            <p>This website will help you to learn all courses of web development, designing and other programming languages. <br>The examples of programming languages are <strong>HTML</strong>, <strong>CSS</strong>, <strong>JAVASCRIPT</strong>, <strong>MySql</strong>, <strong>PHP</strong>, <strong>PYTHON</strong>, and <strong>C++</strong> <br> <h3 style="color: red; text-decoration: line-through;">Pay $7/mo</h3> <h3 style="color: rgb(47, 255, 57);">Free</h3></p>
+            <a href="#"><button type="button" onclick="openform()">SIGN UP for free</button></a>
+            <div class="div1">
+                <h2>Address & Contact us: </h2>
+                <ul>
+                    <li>Rwanda/Kigali</li>
+                    <li><a href="#">Email</a>|</li>
+                    <li><a href="#">Facebook</a>|</li>
+                    <li><a href="#">Instagram</a>|</li>
+                    <li><a href="#">Twitter</a>|</li>
+                    <li><a href="#">Call</a>|</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="video">
+        <video src="sample.mp4" muted autoplay loop></video>
+    </div>
+    <form id="loginForm">
+        <fieldset class="set1">
+            <h3>LOG IN</h3>
+            <input type="text" name="Username" id="username" placeholder="Username" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="submit" value="LOG IN" class="login">
+            <p id="error" class="error">Invalid username or password</p>
+            <p>If you don't have account, <a href="#" onclick="openform()">create an account.</a></p>
+        </fieldset>
+        <h4>or</h4>
+        <fieldset class="set2">
+            <h3>Log in with :</h3>
+            <a href="#"><button type="button" class="button1"><i class="fa-brands fa-google"></i> Google account</button></a>
+            <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
+            <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
+        </fieldset>
+        <h6>© 2025 Kat Programmers, All Rights Reserved.</h6>
+    </form>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function openform() {
+            document.getElementById("form2").style.display = "block";
+        }
+
+        function closeform() {
+            document.getElementById("form2").style.display = "none";
+        }
+
+        const fixedUsername = "arsprogrammer";
+        const fixedPassword = "arsenekwi";
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const error = document.getElementById("error");
+
+            if (username === fixedUsername && password === fixedPassword) {
+                window.location.href = "home.html";
+            } else {
+                error.style.display = "block";
+            }
+        });
+    </script>
+      <div id="g_id_onload"
+       data-client_id="49825937383-cleoin6h3d8eq3fpnb2teds0m4g3h8q3.apps.googleusercontent.com"
+       data-callback="handleCredentialResponse"
+       data-auto_prompt="false">
+  </div>
+  <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"></div>
+  <div id="user-info">
+    <p><strong>Name:</strong> <span id="user-name"></span></p>
+    <p><strong>Email:</strong> <span id="user-email"></span></p>
+  </div>
+  <button id="sign-out" onclick="signOut()">Sign Out</button>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script>
+    function handleCredentialResponse(response) {
+      const idToken = response.credential;
+      const decoded = decodeJwtResponse(idToken);
+      
+      // Update UI with user info
+      document.getElementById('user-name').textContent = decoded.name;
+      document.getElementById('user-email').textContent = decoded.email;
+      document.getElementById('user-info').style.display = 'block';
+      document.getElementById('sign-out').style.display = 'block';
+      document.querySelector('.g_id_signin').style.display = 'none';
+      
+      // Store user data (for demo purposes)
+      localStorage.setItem('user', JSON.stringify(decoded));
+    }
+
+    function decodeJwtResponse(token) {
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+      return JSON.parse(jsonPayload);
+    }
+
+    function signOut() {
+      google.accounts.id.disableAutoSelect();
+      localStorage.removeItem('user');
+      document.getElementById('user-info').style.display = 'none';
+      document.getElementById('sign-out').style.display = 'none';
+      document.querySelector('.g_id_signin').style.display = 'block';
+      document.getElementById('user-name').textContent = '';
+      document.getElementById('user-email').textContent = '';
+    }
+
+    // Check if user is already logged in
+    window.onload = function() {
+      const user = localStorage.getItem('user');
+      if (user) {
+        const decoded = JSON.parse(user);
+        document.getElementById('user-name').textContent = decoded.name;
+        document.getElementById('user-email').textContent = decoded.email;
+        document.getElementById('user-info').style.display = 'block';
+        document.getElementById('sign-out').style.display = 'block';
+        document.querySelector('.g_id_signin').style.display = 'none';
+      }
+    };
+  </script>
+</body>
+</html>

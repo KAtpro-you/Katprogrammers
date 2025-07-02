@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Default Dark Mode */
+body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 85px;
+    background: #161a2d;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+body.light-mode .sidebar {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header img {
+    width: 42px;
+    border-radius: 50%;
+}
+
+.sidebar-header h2 {
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 15px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+body.light-mode .sidebar-header h2 {
+    color: #000;
+}
+
+.sidebar:hover .sidebar-header h2 {
+    opacity: 1;
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 20px;
+    height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    color: #dbd4d4e3;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 15px 10px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+body.light-mode .sidebar-links li a {
+    color: #000;
+}
+
+.sidebar-links li a span i {
+    font-size: 1.2rem;
+    color: #fff;
+    min-width: 24px;
+    text-align: center;
+}
+
+body.light-mode .sidebar-links li a span i {
+    color: #000;
+}
+
+.sidebar-links li a.home {
+    border-radius: 4px;
+}
+
+/* Bottom Group (Toggle Theme and Profile) */
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.sidebar-bottom li {
+    list-style: none;
+}
+
+.sidebar-links li a:hover {
+    background-image: linear-gradient(45deg, blue, rgb(247, 0, 255));
+    color: #fff;
+    border-radius: 4px;
+}
+
+body.light-mode .sidebar-links li a:hover {
+    background-image: linear-gradient(90deg,white, rgb(255, 230, 0));
+    color: #000;
+    transition: 0.3s ease;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 85px;
+    flex-grow: 1;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 85px;
+    width: calc(100% - 85px);
+    height: 80px;
+    background-color: rgb(0, 60, 255);
+    text-align: center;
+    color: aliceblue;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode header {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
+}
+
+header h1 {
+    color: rgb(245, 194, 129);
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+body.light-mode header h1 {
+    color: #333;
+}
+
+header p {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+body.light-mode header p {
+    color: #555;
+}
+
+/* Media Query for Laptop Screens (1024px and above) */
+@media screen and (min-width: 1024px) {
+    .sidebar {
+        width: 100px;
+    }
+
+    .sidebar:hover {
+        width: 300px;
+    }
+
+    .main-content {
+        margin-left: 100px;
+    }
+
+    header {
+        left: 100px;
+        width: calc(100% - 100px);
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+        margin-top: 15px;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .sidebar-header img {
+        width: 50px;
+    }
+
+    .sidebar-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .sidebar-links li a span i {
+        font-size: 1.4rem;
+    }
+
+    .sidebar-links li a {
+        font-size: 1rem;
+        padding: 18px 12px;
+    }
+}
+
+/* Optional: Larger Laptop Screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+    .sidebar {
+        width: 99px;
+    }
+
+    .sidebar:hover {
+        width: 330px;
+    }
+
+    .main-content {
+        margin-left: 120px;
+    }
+
+    header {
+        left: 100px;
+        width: calc(100% - 100px);
+        height: 120px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .sidebar-header img {
+        width: 60px;
+    }
+
+    .sidebar-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .sidebar-links li a span i {
+        font-size: 1.6rem;
+    }
+
+    .sidebar-links li a {
+        font-size: 1.1rem;
+        padding: 20px 15px;
+    }
+}
+
+/* NEW: Media Query for Mobile Screens (768px and below) */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #161a2d;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    body.light-mode .sidebar {
+        background: #fff;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hide sidebar header on mobile */
+    .sidebar-header {
+        display: none;
+    }
+
+    /* Adjust sidebar links for horizontal layout */
+    .sidebar-links {
+        margin-top: 0;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .sidebar-links li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .sidebar-links li a {
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+        font-size: 0.7rem;
+        color: #dbd4d4e3;
+    }
+
+    body.light-mode .sidebar-links li a {
+        color: #000;
+    }
+
+    .sidebar-links li a span i {
+        font-size: 1.2rem;
+        min-width: 0;
+    }
+    a p{
+        display: none;
+    }
+
+    /* Hide text labels for all sidebar links on mobile */
+    .sidebar-links li a span:not(.fa) {
+        display: block;
+    }
+
+    /* Ensure icons are visible */
+    .sidebar-links li a span i {
+        display: inline-block;
+    }
+
+    /* Sidebar bottom group */
+    .sidebar-bottom {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Disable hover effect on mobile */
+    .sidebar:hover {
+        width: 100%;
+    }
+
+    /* Adjust main content and header */
+    .main-content {
+        margin-left: 0;
+        margin-bottom: 60px; /* Space for bottom sidebar */
+    }
+
+    header {
+        left: 0;
+        width: 100%;
+        height: 60px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+        margin-top: 8px;
+    }
+
+    header p {
+        font-size: 0.7rem;
+    }
+}
