@@ -410,66 +410,7 @@
             }
         });
     </script>
-      <div id="g_id_onload"
-       data-client_id="49825937383-cleoin6h3d8eq3fpnb2teds0m4g3h8q3.apps.googleusercontent.com"
-       data-callback="handleCredentialResponse"
-       data-auto_prompt="false">
-  </div>
-  <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"></div>
-  <div id="user-info">
-    <p><strong>Name:</strong> <span id="user-name"></span></p>
-    <p><strong>Email:</strong> <span id="user-email"></span></p>
-  </div>
-  <button id="sign-out" onclick="signOut()">Sign Out</button>
+  
 
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script>
-    function handleCredentialResponse(response) {
-      const idToken = response.credential;
-      const decoded = decodeJwtResponse(idToken);
-      
-      // Update UI with user info
-      document.getElementById('user-name').textContent = decoded.name;
-      document.getElementById('user-email').textContent = decoded.email;
-      document.getElementById('user-info').style.display = 'block';
-      document.getElementById('sign-out').style.display = 'block';
-      document.querySelector('.g_id_signin').style.display = 'none';
-      
-      // Store user data (for demo purposes)
-      localStorage.setItem('user', JSON.stringify(decoded));
-    }
-
-    function decodeJwtResponse(token) {
-      const base64Url = token.split('.')[1];
-      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-      const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-      }).join(''));
-      return JSON.parse(jsonPayload);
-    }
-
-    function signOut() {
-      google.accounts.id.disableAutoSelect();
-      localStorage.removeItem('user');
-      document.getElementById('user-info').style.display = 'none';
-      document.getElementById('sign-out').style.display = 'none';
-      document.querySelector('.g_id_signin').style.display = 'block';
-      document.getElementById('user-name').textContent = '';
-      document.getElementById('user-email').textContent = '';
-    }
-
-    // Check if user is already logged in
-    window.onload = function() {
-      const user = localStorage.getItem('user');
-      if (user) {
-        const decoded = JSON.parse(user);
-        document.getElementById('user-name').textContent = decoded.name;
-        document.getElementById('user-email').textContent = decoded.email;
-        document.getElementById('user-info').style.display = 'block';
-        document.getElementById('sign-out').style.display = 'block';
-        document.querySelector('.g_id_signin').style.display = 'none';
-      }
-    };
-  </script>
 </body>
 </html>
