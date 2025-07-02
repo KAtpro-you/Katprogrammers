@@ -393,8 +393,11 @@
             document.getElementById("form2").style.display = "none";
         }
 
-        const fixedUsername = "arsprogrammer";
-        const fixedPassword = "arsenekwi";
+        const validCredentials = [
+            { username: "arsene", password: "arsene" },
+            { username: "donald", password: "donald" },
+            { username: "user", password: "user" }
+        ];
 
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -403,7 +406,11 @@
             const password = document.getElementById("password").value;
             const error = document.getElementById("error");
 
-            if (username === fixedUsername && password === fixedPassword) {
+            const isValid = validCredentials.some(cred => 
+                cred.username === username && cred.password === password
+            );
+
+            if (isValid) {
                 window.location.href = "home.html";
             } else {
                 error.style.display = "block";
