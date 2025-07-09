@@ -546,34 +546,7 @@
             document.getElementById("form2").style.display = "none";
         }
 
-        // Existing local credential validation
-       // Load saved users from localStorage if available
-const savedUsers = JSON.parse(localStorage.getItem("extraUsers")) || [];
-const validCredentials = [
-    { username: "arsene", password: "arsene" },
-    { username: "donald", password: "donald" },
-    { username: "user", password: "user" },
-    ...savedUsers // Add saved signups
-];
 
-
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            const error = document.getElementById("error");
-
-            const isValid = validCredentials.some(cred => 
-                cred.username === username && cred.password === password
-            );
-
-            if (isValid) {
-                window.location.href = "home.html";
-            } else {
-                error.style.display = "block";
-            }
-        });
     </script>
 
     
