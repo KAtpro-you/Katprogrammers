@@ -10,6 +10,58 @@
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Kat-Programmers Log in</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD-gCHlAYiX3zJiAeSSSNbQ1qhXJMHLeSQ",
+    authDomain: "katprogrammers-1e30e.firebaseapp.com",
+    projectId: "katprogrammers-1e30e",
+    storageBucket: "katprogrammers-1e30e.appspot.com",
+    messagingSenderId: "20873434906",
+    appId: "1:20873434906:web:9f78f7f25768fb73f37ea3",
+    measurementId: "G-9KXJPD09QZ"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  document.querySelector('.form2 input[type="submit"]').addEventListener('click', function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+    if (!email || !password) {
+      alert("Email and password are required.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        alert("✅ Account created successfully!");
+        document.getElementById("form2").style.display = "none";
+      })
+      .catch((error) => {
+        alert("❌ Error: " + error.message);
+        console.error(error.code, error.message);
+      });
+  });
+</script><script>
+    (function(){
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+</script>
     
     <style>
         body {
@@ -354,13 +406,12 @@
         <div class="form21">
             <fieldset class="set1">
                 <h3 style="background-image: linear-gradient(45deg, blue, rgb(255, 0, 217) 60%); color: transparent; -webkit-background-clip: text;">SIGN UP for free</h3>
-                <input type="text" name="" id="" placeholder="First name">
-                <input type="text" name="" id="" placeholder="Last name">
-                <input type="date" name="" id="" placeholder="Birth date">
-                <input type="email" name="" id="" placeholder="E-mail">
-                <input type="text" name="Username" id="" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="password" name="" id="" placeholder="Confirm Password">
+                <input type="text" name="fname" id="fname" placeholder="First name">
+                <input type="text" name="lname" id="lname" placeholder="Last name">
+                <input type="date" name="date" id="date" placeholder="Birth date">
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
                 <input type="submit" value="SIGN UP" class="login">
                 <h4>or</h4>
                 <h3>Sign Up with :</h3>
@@ -398,9 +449,45 @@
     <form id="loginForm">
         <fieldset class="set1">
             <h3>LOG IN</h3>
-            <input type="text" name="Username" id="username" placeholder="Username" required>
+            <input type="email" name="email" id="email" placeholder="E-mail" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
             <input type="submit" value="LOG IN" class="login">
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD-gCHlAYiX3zJiAeSSSNbQ1qhXJMHLeSQ",
+    authDomain: "katprogrammers-1e30e.firebaseapp.com",
+    projectId: "katprogrammers-1e30e",
+    storageBucket: "katprogrammers-1e30e.appspot.com",
+    messagingSenderId: "20873434906",
+    appId: "1:20873434906:web:9f78f7f25768fb73f37ea3",
+    measurementId: "G-9KXJPD09QZ"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Logged in successfully
+        window.location.href = "home.html";
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        document.getElementById("error").innerText = "❌ " + errorMessage;
+        document.getElementById("error").style.display = "block";
+        console.error(error.code, error.message);
+      });
+  });
+</script>
             <p id="error" class="error">Invalid username or password</p>
             <p>If you don't have account, <a href="#" onclick="openform()">create an account.</a></p>
         </fieldset>
@@ -460,11 +547,15 @@
         }
 
         // Existing local credential validation
-        const validCredentials = [
-            { username: "arsene", password: "arsene" },
-            { username: "donald", password: "donald" },
-            { username: "user", password: "user" }
-        ];
+       // Load saved users from localStorage if available
+const savedUsers = JSON.parse(localStorage.getItem("extraUsers")) || [];
+const validCredentials = [
+    { username: "arsene", password: "arsene" },
+    { username: "donald", password: "donald" },
+    { username: "user", password: "user" },
+    ...savedUsers // Add saved signups
+];
+
 
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -484,6 +575,8 @@
             }
         });
     </script>
+
+    
     
 </body>
 </html>
