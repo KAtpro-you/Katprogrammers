@@ -31,7 +31,7 @@ body.light-mode {
     top: 0;
     left: 0;
     height: 100%;
-    width: 85px;
+    width: 70px;
     background: #161a2d;
     padding: 25px 20px;
     transition: all 0.4s ease;
@@ -238,7 +238,7 @@ body.light-mode header p {
 
 @media screen and (min-width: 1024px) {
     .sidebar {
-        width: 100px;
+        width: 70px;
     }
 
     .sidebar:hover {
@@ -258,7 +258,7 @@ body.light-mode header p {
 
 @media screen and (min-width: 1440px) {
     .sidebar {
-        width: 99px;
+        width: 80px;
     }
 
     .sidebar:hover {
