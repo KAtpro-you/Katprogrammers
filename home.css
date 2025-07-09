@@ -292,7 +292,7 @@ body.light-mode header p {
 /* Media Query for Laptop Screens (1024px and above) */
 @media screen and (min-width: 1024px) {
     .sidebar {
-        width: 100px;
+        width: 85px;
     }
 
     .sidebar:hover {
