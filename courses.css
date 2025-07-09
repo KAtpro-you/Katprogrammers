@@ -22,13 +22,9 @@ body {
 
 .min-h-screen {
     min-height: 100vh;
-    font-size: 10px;
 }
-.text-2xl{
-    font-size: 5px;
-}
-.lg\:col-span-1{
-    margin-top: 2.5cm;
+.lg\:col-span-3,.lg\:col-span-1{
+    margin-top: 3cm;
 }
 .bg-gradient-to-br {
     background: linear-gradient(to bottom right, #000000, #0030b4, #000000);
