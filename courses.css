@@ -23,7 +23,7 @@ body {
 }
 
 .bg-gradient-to-br {
-    background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
+    background: linear-gradient(to bottom right, #000000, #0030b4, #000000);
 }
 
 .border-white\/10 {
@@ -185,6 +185,9 @@ body {
 .py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+.py-3{
+    height: 1cm;
 }
 
 .py-8 {
@@ -727,4 +730,7 @@ button {
 
 .self-end {
     align-self: flex-end;
+}
+.gap-4 button{
+    width: 30%;
 }

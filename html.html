@@ -6,6 +6,7 @@
     <title>HTML Tutorial - KAT-PROGRAMMERS</title>
     <link rel="stylesheet" href="courses.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -18,7 +19,7 @@
                             ← Back to Home
                         </button>
                         <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-lg">
-                            🌐
+                            <i class="fa-brands fa-html5"></i>
                         </div>
                         <h1 class="text-2xl font-bold text-white">HTML Tutorial</h1>
                     </div>
@@ -100,17 +101,17 @@
                         
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                             <div class="text-center p-4 bg-white/5 rounded-lg">
-                                <div class="text-2xl mb-2">📚</div>
+                                <div class="text-2xl mb-2"><i class="fa-solid fa-book"></i></div>
                                 <div class="text-white font-semibold">15 Lessons</div>
                                 <div class="text-gray-400 text-sm">Comprehensive curriculum</div>
                             </div>
                             <div class="text-center p-4 bg-white/5 rounded-lg">
-                                <div class="text-2xl mb-2">💻</div>
+                                <div class="text-2xl mb-2"><i class="fa-solid fa-laptop-code"></i></div>
                                 <div class="text-white font-semibold">Hands-on</div>
                                 <div class="text-gray-400 text-sm">Practice with examples</div>
                             </div>
                             <div class="text-center p-4 bg-white/5 rounded-lg">
-                                <div class="text-2xl mb-2">✅</div>
+                                <div class="text-2xl mb-2"><i class="fa-solid fa-check fa-bounce" style="color: #63E6BE;"></i></div>
                                 <div class="text-white font-semibold">Certificate</div>
                                 <div class="text-gray-400 text-sm">Upon completion</div>
                             </div>
@@ -134,11 +135,10 @@
                         <!-- Example 1 -->
                         <div class="bg-white/5 border border-white/10 rounded-xl p-6">
                             <div class="flex items-center justify-between mb-4">
-                                <h3 class="text-white text-xl font-bold">Basic HTML Structure</h3>
-                                <button 
-                                    class="btn btn-outline btn-sm copy-btn" 
-                                    data-code=" <!-- Basic HTML Structure -->
-<!DOCTYPE html>
+                                <h3 class="text-white text-xl font-bold">Basic Html Structure</h3>
+                                
+                                <button type="button"  class="btn btn-outline btn-sm copy-btn" hidden
+                                    data-code="<!DOCTYPE html>
 <html lang=&quot;en&quot;>
 <head>
     <meta charset=&quot;UTF-8&quot;>
@@ -150,8 +150,8 @@
     <p>This is my first HTML page.</p>
 </body>
 </html> "
-                                    data-title="Basic HTML Structure">
-                                    📋 Copy
+                                    data-title="Basic Html Structure">
+                                    <i class="fa-regular fa-clipboard"></i> copy
                                 </button>
                             </div>
                             <p class="text-gray-300 mb-4">The fundamental structure of an HTML document</p>
@@ -183,7 +183,7 @@
 <a href=&quot;https://example.com&quot;>This is a link</a>
 <img src=&quot;image.jpg&quot; alt=&quot;Description of image&quot;>"
                                     data-title="HTML Elements and Tags">
-                                    📋 Copy
+                                    <i class="fa-regular fa-clipboard"></i> copy
                                 </button>
                             </div>
                             <p class="text-gray-300 mb-4">Common HTML elements for content structure</p>
@@ -216,7 +216,7 @@
     <li>Step three</li>
 </ol>"
                                     data-title="HTML Lists">
-                                    📋 Copy
+                                    <i class="fa-regular fa-clipboard"></i> copy
                                 </button>
                             </div>
                             <p class="text-gray-300 mb-4">Creating bulleted and numbered lists</p>
@@ -256,7 +256,7 @@
     <button type=&quot;submit&quot;>Send Message</button>
 </form>"
                                     data-title="HTML Forms">
-                                    📋 Copy
+                                    <i class="fa-regular fa-clipboard"></i> copy
                                 </button>
                             </div>
                             <p class="text-gray-300 mb-4">Creating interactive forms with various input types</p>
