@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Tutorial - KAT-PROGRAMMERS</title>
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+        <!-- Header -->
+        <header class="border-b border-white/10 backdrop-blur-md bg-white/5">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <button class="btn btn-ghost" onclick="navigateToHome()">
+                            ← Back to Home
+                        </button>
+                        <div class="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center text-lg">
+                            ⚙️
+                        </div>
+                        <h1 class="text-2xl font-bold text-white">C++ Tutorial</h1>
+                    </div>
+                    <div class="bg-gradient-to-r from-green-500 to-emerald-500 px-4 py-2 rounded-full">
+                        <span class="text-white font-medium">Advanced Level</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sticky top-8">
+                        <h3 class="text-white text-lg font-bold mb-4">Course Contents</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-xs text-white font-bold">1</div>
+                                    <h4 class="text-white font-medium text-sm">C++ Fundamentals</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Basic Syntax</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Data Types</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Variables</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Operators</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-xs text-white font-bold">2</div>
+                                    <h4 class="text-white font-medium text-sm">Control Structures</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Conditionals</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Loops</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Switch Statements</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Functions</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-xs text-white font-bold">3</div>
+                                    <h4 class="text-white font-medium text-sm">Object-Oriented Programming</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Classes & Objects</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Inheritance</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Polymorphism</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Encapsulation</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-xs text-white font-bold">4</div>
+                                    <h4 class="text-white font-medium text-sm">Advanced Topics</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Pointers & References</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Memory Management</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">STL Containers</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Templates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Introduction -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
+                        <h2 class="text-white text-3xl font-bold mb-4">Learn C++ - System Programming Language</h2>
+                        <p class="text-gray-300 text-lg mb-6">
+                            Master system programming with C++. Learn object-oriented programming, memory management, and high-performance computing.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">📚</div>
+                                <div class="text-white font-semibold">30 Lessons</div>
+                                <div class="text-gray-400 text-sm">Comprehensive curriculum</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">⚙️</div>
+                                <div class="text-white font-semibold">System Level</div>
+                                <div class="text-gray-400 text-sm">Low-level programming</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">🚀</div>
+                                <div class="text-white font-semibold">Performance</div>
+                                <div class="text-gray-400 text-sm">High-speed applications</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-white text-xl mb-4">What You'll Learn:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• C++ syntax and fundamental concepts</li>
+                                <li>• Object-oriented programming principles</li>
+                                <li>• Memory management and pointers</li>
+                                <li>• Standard Template Library (STL)</li>
+                                <li>• Advanced features like templates and lambdas</li>
+                                <li>• Best practices for performance optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Code Examples -->
+                    <div class="space-y-6">
+                        <!-- Example 1 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Hello World Program</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="#include <iostream>
+using namespace std;
+
+int main() {
+    cout << \"Hello, World!\" << endl;
+    return 0;
+}"
+                                    data-title="Hello World Program">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Your first C++ program</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 2 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Variables and Data Types</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="#include <iostream>
+using namespace std;
+
+int main() {
+    // Integer types
+    int age = 25;
+    long population = 7800000000L;
+    
+    // Floating point types
+    double price = 99.99;
+    float temperature = 23.5f;
+    
+    // Character and string
+    char grade = 'A';
+    string name = \"John Doe\";
+    
+    // Boolean
+    bool isStudent = true;
+    
+    // Output
+    cout << \"Name: \" << name << endl;
+    cout << \"Age: \" << age << endl;
+    cout << \"Grade: \" << grade << endl;
+    
+    return 0;
+}"
+                                    data-title="Variables and Data Types">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Working with different data types in C++</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    // Integer types
+    int age = 25;
+    long population = 7800000000L;
+    
+    // Floating point types
+    double price = 99.99;
+    float temperature = 23.5f;
+    
+    // Character and string
+    char grade = 'A';
+    string name = "John Doe";
+    
+    // Boolean
+    bool isStudent = true;
+    
+    // Output
+    cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+    cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+    cout &lt;&lt; "Grade: " &lt;&lt; grade &lt;&lt; endl;
+    
+    return 0;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 3 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Classes and Objects</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int age;
+    double gpa;
+
+public:
+    // Constructor
+    Student(string n, int a, double g) {
+        name = n;
+        age = a;
+        gpa = g;
+    }
+    
+    // Methods
+    void displayInfo() {
+        cout << \"Name: \" << name << endl;
+        cout << \"Age: \" << age << endl;
+        cout << \"GPA: \" << gpa << endl;
+    }
+    
+    void setGPA(double newGPA) {
+        gpa = newGPA;
+    }
+    
+    double getGPA() {
+        return gpa;
+    }
+};
+
+int main() {
+    Student student1(\"Alice\", 20, 3.8);
+    student1.displayInfo();
+    return 0;
+}"
+                                    data-title="Classes and Objects">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Object-oriented programming with classes</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int age;
+    double gpa;
+
+public:
+    // Constructor
+    Student(string n, int a, double g) {
+        name = n;
+        age = a;
+        gpa = g;
+    }
+    
+    // Methods
+    void displayInfo() {
+        cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; endl;
+        cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; endl;
+        cout &lt;&lt; "GPA: " &lt;&lt; gpa &lt;&lt; endl;
+    }
+    
+    void setGPA(double newGPA) {
+        gpa = newGPA;
+    }
+    
+    double getGPA() {
+        return gpa;
+    }
+};
+
+int main() {
+    Student student1("Alice", 20, 3.8);
+    student1.displayInfo();
+    return 0;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 4 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">STL Vectors and Algorithms</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    // Create vector
+    vector<int> numbers = {5, 2, 8, 1, 9, 3};
+    
+    // Add elements
+    numbers.push_back(7);
+    numbers.push_back(4);
+    
+    // Sort the vector
+    sort(numbers.begin(), numbers.end());
+    
+    // Print sorted vector
+    cout << \"Sorted numbers: \";
+    for(int num : numbers) {
+        cout << num << \" \";
+    }
+    cout << endl;
+    
+    // Find element
+    auto it = find(numbers.begin(), numbers.end(), 5);
+    if(it != numbers.end()) {
+        cout << \"Found 5 at position: \" << distance(numbers.begin(), it) << endl;
+    }
+    
+    return 0;
+}"
+                                    data-title="STL Vectors and Algorithms">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Using the Standard Template Library</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+int main() {
+    // Create vector
+    vector&lt;int&gt; numbers = {5, 2, 8, 1, 9, 3};
+    
+    // Add elements
+    numbers.push_back(7);
+    numbers.push_back(4);
+    
+    // Sort the vector
+    sort(numbers.begin(), numbers.end());
+    
+    // Print sorted vector
+    cout &lt;&lt; "Sorted numbers: ";
+    for(int num : numbers) {
+        cout &lt;&lt; num &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+    
+    // Find element
+    auto it = find(numbers.begin(), numbers.end(), 5);
+    if(it != numbers.end()) {
+        cout &lt;&lt; "Found 5 at position: " &lt;&lt; distance(numbers.begin(), it) &lt;&lt; endl;
+    }
+    
+    return 0;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
+                        <h3 class="text-white text-xl font-bold mb-2">Continue Learning</h3>
+                        <p class="text-gray-300 mb-4">
+                            Explore Python for versatility or dive into database management with MySQL!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                class="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToTutorial('python-tutorial.html')">
+                                Next: Learn Python →
+                            </button>
+                            <button 
+                                class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToTutorial('mysql-tutorial.html')">
+                                Learn MySQL →
+                            </button>
+                            <button 
+                                class="btn btn-outline"
+                                onclick="navigateToHome()">
+                                Back to All Courses
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

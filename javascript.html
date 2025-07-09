@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial - KAT-PROGRAMMERS</title>
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900">
+        <!-- Header -->
+        <header class="border-b border-white/10 backdrop-blur-md bg-white/5">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <button class="btn btn-ghost" onclick="navigateToHome()">
+                            ← Back to Home
+                        </button>
+                        <div class="w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-lg">
+                            ⚡
+                        </div>
+                        <h1 class="text-2xl font-bold text-white">JavaScript Tutorial</h1>
+                    </div>
+                    <div class="bg-gradient-to-r from-yellow-400 to-orange-500 px-4 py-2 rounded-full">
+                        <span class="text-white font-medium">Intermediate Level</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sticky top-8">
+                        <h3 class="text-white text-lg font-bold mb-4">Course Contents</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-xs text-white font-bold">1</div>
+                                    <h4 class="text-white font-medium text-sm">JavaScript Basics</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Variables & Data Types</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Functions</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Operators</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Control Structures</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-xs text-white font-bold">2</div>
+                                    <h4 class="text-white font-medium text-sm">DOM Manipulation</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Selecting Elements</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Event Handling</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Dynamic Content</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Style Manipulation</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-xs text-white font-bold">3</div>
+                                    <h4 class="text-white font-medium text-sm">Advanced JavaScript</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Objects & Arrays</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Arrow Functions</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Async/Await</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Modules</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-xs text-white font-bold">4</div>
+                                    <h4 class="text-white font-medium text-sm">Modern JavaScript</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">ES6+ Features</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Fetch API</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Local Storage</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Error Handling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Introduction -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
+                        <h2 class="text-white text-3xl font-bold mb-4">Learn JavaScript - The Programming Language of the Web</h2>
+                        <p class="text-gray-300 text-lg mb-6">
+                            JavaScript makes websites interactive. Learn modern JavaScript, DOM manipulation, and async programming.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">📚</div>
+                                <div class="text-white font-semibold">25 Lessons</div>
+                                <div class="text-gray-400 text-sm">Comprehensive curriculum</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">⚡</div>
+                                <div class="text-white font-semibold">Interactive</div>
+                                <div class="text-gray-400 text-sm">Live code examples</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">🚀</div>
+                                <div class="text-white font-semibold">Modern JS</div>
+                                <div class="text-gray-400 text-sm">ES6+ features</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-white text-xl mb-4">What You'll Learn:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• JavaScript fundamentals and syntax</li>
+                                <li>• DOM manipulation and event handling</li>
+                                <li>• Modern ES6+ features and syntax</li>
+                                <li>• Asynchronous programming with async/await</li>
+                                <li>• Working with APIs and JSON</li>
+                                <li>• Error handling and debugging</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Code Examples -->
+                    <div class="space-y-6">
+                        <!-- Example 1 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Variables and Functions</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="// Variables
+let name = 'John';
+const age = 25;
+var isStudent = true;
+
+// Functions
+function greet(person) {
+    return `Hello, ${person}!`;
+}
+
+// Arrow Functions
+const add = (a, b) => a + b;
+
+// Usage
+console.log(greet(name));
+console.log(add(5, 3));"
+                                    data-title="Variables and Functions">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Basic JavaScript variables and function syntax</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-yellow-300 text-sm">// Variables
+let name = 'John';
+const age = 25;
+var isStudent = true;
+
+// Functions
+function greet(person) {
+    return `Hello, ${person}!`;
+}
+
+// Arrow Functions
+const add = (a, b) => a + b;
+
+// Usage
+console.log(greet(name));
+console.log(add(5, 3));</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 2 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">DOM Manipulation</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="// Selecting elements
+const button = document.getElementById('myButton');
+const elements = document.querySelectorAll('.item');
+
+// Event handling
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+
+// Changing content
+document.querySelector('h1').textContent = 'New Title';
+
+// Adding CSS classes
+button.classList.add('active');
+button.classList.toggle('highlight');"
+                                    data-title="DOM Manipulation">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Interacting with HTML elements using JavaScript</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-yellow-300 text-sm">// Selecting elements
+const button = document.getElementById('myButton');
+const elements = document.querySelectorAll('.item');
+
+// Event handling
+button.addEventListener('click', function() {
+    alert('Button clicked!');
+});
+
+// Changing content
+document.querySelector('h1').textContent = 'New Title';
+
+// Adding CSS classes
+button.classList.add('active');
+button.classList.toggle('highlight');</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 3 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Objects and Arrays</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="// Objects
+const person = {
+    name: 'Alice',
+    age: 30,
+    hobbies: ['reading', 'coding', 'gaming'],
+    greet() {
+        return `Hi, I'm ${this.name}`;
+    }
+};
+
+// Arrays
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+const filtered = numbers.filter(n => n > 3);
+
+// Destructuring
+const { name, age } = person;
+const [first, second] = numbers;"
+                                    data-title="Objects and Arrays">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Working with JavaScript objects and arrays</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-yellow-300 text-sm">// Objects
+const person = {
+    name: 'Alice',
+    age: 30,
+    hobbies: ['reading', 'coding', 'gaming'],
+    greet() {
+        return `Hi, I'm ${this.name}`;
+    }
+};
+
+// Arrays
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map(n => n * 2);
+const filtered = numbers.filter(n => n > 3);
+
+// Destructuring
+const { name, age } = person;
+const [first, second] = numbers;</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 4 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Async/Await and Fetch</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="// Async function
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Using the function
+fetchData().then(data => {
+    // Handle the data
+    displayData(data);
+});
+
+// Promise example
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Success!'), 1000);
+});"
+                                    data-title="Async/Await and Fetch">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Modern asynchronous JavaScript programming</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-yellow-300 text-sm">// Async function
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Using the function
+fetchData().then(data => {
+    // Handle the data
+    displayData(data);
+});
+
+// Promise example
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Success!'), 1000);
+});</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
+                        <h3 class="text-white text-xl font-bold mb-2">Ready for Backend?</h3>
+                        <p class="text-gray-300 mb-4">
+                            Continue your programming journey with C++, Python, or learn database management with MySQL!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToTutorial('cpp-tutorial.html')">
+                                Next: Learn C++ →
+                            </button>
+                            <button 
+                                class="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToTutorial('python-tutorial.html')">
+                                Learn Python →
+                            </button>
+                            <button 
+                                class="btn btn-outline"
+                                onclick="navigateToHome()">
+                                Back to All Courses
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

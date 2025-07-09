@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial - KAT-PROGRAMMERS</title>
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <!-- Header -->
+        <header class="border-b border-white/10 backdrop-blur-md bg-white/5">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <button class="btn btn-ghost" onclick="navigateToHome()">
+                            ← Back to Home
+                        </button>
+                        <div class="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-lg">
+                            🌐
+                        </div>
+                        <h1 class="text-2xl font-bold text-white">HTML Tutorial</h1>
+                    </div>
+                    <div class="bg-gradient-to-r from-orange-500 to-red-500 px-4 py-2 rounded-full">
+                        <span class="text-white font-medium">Beginner Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sticky top-8">
+                        <h3 class="text-white text-lg font-bold mb-4">Course Contents</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-xs text-white font-bold">1</div>
+                                    <h4 class="text-white font-medium text-sm">Introduction to HTML</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">What is HTML?</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">HTML Structure</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">HTML Tags</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Attributes</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-xs text-white font-bold">2</div>
+                                    <h4 class="text-white font-medium text-sm">Basic HTML Elements</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Headings</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Paragraphs</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Links</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Images</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Lists</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-xs text-white font-bold">3</div>
+                                    <h4 class="text-white font-medium text-sm">HTML Forms</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Form Elements</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Input Types</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Form Validation</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Buttons</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-xs text-white font-bold">4</div>
+                                    <h4 class="text-white font-medium text-sm">HTML5 Features</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Semantic Elements</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Audio/Video</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Canvas</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Local Storage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Introduction -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
+                        <h2 class="text-white text-3xl font-bold mb-4">Learn HTML - HyperText Markup Language</h2>
+                        <p class="text-gray-300 text-lg mb-6">
+                            HTML is the standard markup language for creating web pages. It describes the structure of a web page using markup tags.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">📚</div>
+                                <div class="text-white font-semibold">15 Lessons</div>
+                                <div class="text-gray-400 text-sm">Comprehensive curriculum</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">💻</div>
+                                <div class="text-white font-semibold">Hands-on</div>
+                                <div class="text-gray-400 text-sm">Practice with examples</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">✅</div>
+                                <div class="text-white font-semibold">Certificate</div>
+                                <div class="text-gray-400 text-sm">Upon completion</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-white text-xl mb-4">What You'll Learn:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• HTML document structure and syntax</li>
+                                <li>• Essential HTML elements and attributes</li>
+                                <li>• Creating forms and interactive elements</li>
+                                <li>• HTML5 semantic elements and features</li>
+                                <li>• Best practices for web accessibility</li>
+                                <li>• Integration with CSS and JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Code Examples -->
+                    <div class="space-y-6">
+                        <!-- Example 1 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Basic HTML Structure</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="<!DOCTYPE html>
+<html lang=&quot;en&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    <title>My First HTML Page</title>
+</head>
+<body>
+    <h1>Welcome to HTML!</h1>
+    <p>This is my first HTML page.</p>
+</body>
+</html>"
+                                    data-title="Basic HTML Structure">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">The fundamental structure of an HTML document</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to HTML!&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 2 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">HTML Elements and Tags</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="<h1>Main Heading</h1>
+<h2>Subheading</h2>
+<p>This is a paragraph with <strong>bold text</strong> and <em>italic text</em>.</p>
+<a href=&quot;https://example.com&quot;>This is a link</a>
+<img src=&quot;image.jpg&quot; alt=&quot;Description of image&quot;>"
+                                    data-title="HTML Elements and Tags">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Common HTML elements for content structure</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph with &lt;strong&gt;bold text&lt;/strong&gt; and &lt;em&gt;italic text&lt;/em&gt;.&lt;/p&gt;
+&lt;a href="https://example.com"&gt;This is a link&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description of image"&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 3 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">HTML Lists</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="<!-- Unordered List -->
+<ul>
+    <li>First item</li>
+    <li>Second item</li>
+    <li>Third item</li>
+</ul>
+
+<!-- Ordered List -->
+<ol>
+    <li>Step one</li>
+    <li>Step two</li>
+    <li>Step three</li>
+</ol>"
+                                    data-title="HTML Lists">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Creating bulleted and numbered lists</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Step one&lt;/li&gt;
+    &lt;li&gt;Step two&lt;/li&gt;
+    &lt;li&gt;Step three&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 4 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">HTML Forms</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="<form action=&quot;/submit&quot; method=&quot;post&quot;>
+    <label for=&quot;name&quot;>Name:</label>
+    <input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; required>
+    
+    <label for=&quot;email&quot;>Email:</label>
+    <input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required>
+    
+    <label for=&quot;message&quot;>Message:</label>
+    <textarea id=&quot;message&quot; name=&quot;message&quot; rows=&quot;4&quot;></textarea>
+    
+    <button type=&quot;submit&quot;>Send Message</button>
+</form>"
+                                    data-title="HTML Forms">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Creating interactive forms with various input types</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-green-400 text-sm">&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="message"&gt;Message:&lt;/label&gt;
+    &lt;textarea id="message" name="message" rows="4"&gt;&lt;/textarea&gt;
+    
+    &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
+                        <h3 class="text-white text-xl font-bold mb-2">Ready to Continue?</h3>
+                        <p class="text-gray-300 mb-4">
+                            Once you've mastered HTML basics, move on to CSS to style your web pages.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                class="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToTutorial('css-tutorial.html')">
+                                Next: Learn CSS →
+                            </button>
+                            <button 
+                                class="btn btn-outline"
+                                onclick="navigateToHome()">
+                                Back to All Courses
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

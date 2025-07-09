@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial - KAT-PROGRAMMERS</title>
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <!-- Header -->
+        <header class="border-b border-white/10 backdrop-blur-md bg-white/5">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <button class="btn btn-ghost" onclick="navigateToHome()">
+                            ← Back to Home
+                        </button>
+                        <div class="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-lg">
+                            🎨
+                        </div>
+                        <h1 class="text-2xl font-bold text-white">CSS Tutorial</h1>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-500 to-cyan-500 px-4 py-2 rounded-full">
+                        <span class="text-white font-medium">Beginner Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sticky top-8">
+                        <h3 class="text-white text-lg font-bold mb-4">Course Contents</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-xs text-white font-bold">1</div>
+                                    <h4 class="text-white font-medium text-sm">CSS Fundamentals</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">What is CSS?</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">CSS Syntax</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Selectors</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Properties</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-xs text-white font-bold">2</div>
+                                    <h4 class="text-white font-medium text-sm">Styling Text & Colors</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Fonts</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Colors</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Text Properties</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Backgrounds</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-xs text-white font-bold">3</div>
+                                    <h4 class="text-white font-medium text-sm">Layout & Positioning</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Box Model</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Flexbox</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Grid</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Positioning</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-xs text-white font-bold">4</div>
+                                    <h4 class="text-white font-medium text-sm">Advanced CSS</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Animations</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Transitions</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Media Queries</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">CSS Variables</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Introduction -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
+                        <h2 class="text-white text-3xl font-bold mb-4">Learn CSS - Cascading Style Sheets</h2>
+                        <p class="text-gray-300 text-lg mb-6">
+                            CSS is used to style and layout web pages. Learn how to make your HTML beautiful with colors, layouts, and animations.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">📚</div>
+                                <div class="text-white font-semibold">20 Lessons</div>
+                                <div class="text-gray-400 text-sm">Comprehensive curriculum</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">💻</div>
+                                <div class="text-white font-semibold">Visual Learning</div>
+                                <div class="text-gray-400 text-sm">See styles in action</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">✅</div>
+                                <div class="text-white font-semibold">Projects</div>
+                                <div class="text-gray-400 text-sm">Build real layouts</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-white text-xl mb-4">What You'll Learn:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• CSS syntax and selectors</li>
+                                <li>• Typography and color theory</li>
+                                <li>• Box model and layout techniques</li>
+                                <li>• Flexbox and CSS Grid</li>
+                                <li>• Responsive design principles</li>
+                                <li>• Animations and transitions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Code Examples -->
+                    <div class="space-y-6">
+                        <!-- Example 1 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Basic CSS Styling</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="/* CSS Syntax */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 0.2rem;
+}"
+                                    data-title="Basic CSS Styling">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Basic CSS selectors and properties for styling text</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-blue-400 text-sm">/* CSS Syntax */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 0.2rem;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 2 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">CSS Box Model</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code=".box {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    margin: 10px auto;
+    background-color: #f9f9f9;
+}
+
+/* Box-sizing for better control */
+* {
+    box-sizing: border-box;
+}"
+                                    data-title="CSS Box Model">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Understanding the CSS box model with padding, border, and margin</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-blue-400 text-sm">.box {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    margin: 10px auto;
+    background-color: #f9f9f9;
+}
+
+/* Box-sizing for better control */
+* {
+    box-sizing: border-box;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 3 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Flexbox Layout</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code=".container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+}"
+                                    data-title="Flexbox Layout">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Using Flexbox for responsive layouts</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-blue-400 text-sm">.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 4 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">CSS Grid Layout</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code=".grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.grid-item {
+    background-color: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}"
+                                    data-title="CSS Grid Layout">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Creating responsive grid layouts with CSS Grid</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-blue-400 text-sm">.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.grid-item {
+    background-color: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 5 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">CSS Animations</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-element {
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.animated-element:hover {
+    transform: scale(1.05);
+}"
+                                    data-title="CSS Animations">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Creating smooth animations and transitions</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-blue-400 text-sm">@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-element {
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+.animated-element:hover {
+    transform: scale(1.05);
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
+                        <h3 class="text-white text-xl font-bold mb-2">Ready for JavaScript?</h3>
+                        <p class="text-gray-300 mb-4">
+                            Now that you know HTML and CSS, add interactivity with JavaScript!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                class="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToTutorial('javascript-tutorial.html')">
+                                Next: Learn JavaScript →
+                            </button>
+                            <button 
+                                class="btn btn-outline"
+                                onclick="navigateToHome()">
+                                Back to All Courses
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

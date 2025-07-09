@@ -1,0 +1,110 @@
+@import url("common.css");
+
+/* About Page Specific Styles */
+.header_all {
+    margin-left: 5%;
+    margin-top: 7%;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+body.light-mode .header_all {
+    color: #000;
+}
+
+.cards p {
+    margin-top: 5%;
+}
+
+.cards {
+    text-align: center;
+    width: 100%;
+}
+
+.card1, .card2 {
+    position: relative;
+    display: inline-table;
+    height: 30%;
+    width: 30%;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    margin: 5%;
+    box-shadow: 10px 5px 5px rgb(63, 63, 63);
+}
+
+.cards img {
+    height: 5cm;
+    width: 5cm;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
+.cards ul {
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.cards ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+body.light-mode .card1,
+body.light-mode .card2 {
+    background-color: #fff;
+    box-shadow: 10px 10px 5px 5px rgb(189, 189, 189);
+}
+
+body.light-mode .cards ul li a {
+    color: #007910;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .cards {
+        font-size: 10px;
+        margin-top: 0;
+    }
+
+    .cards img {
+        height: 2cm;
+        width: 2cm;
+    }
+
+    .card1, .card2 {
+        display: block;
+        margin: 0%;
+        width: 90%;
+        margin-top: 15%;
+        margin-left: 5%;
+        box-shadow: none;
+    }
+
+    .cards h1 {
+        font-size: 12px;
+    }
+
+    .header_all {
+        margin: 0%;
+        margin-top: 0%;
+        margin-bottom: 15%;
+    }
+
+    .header_all h2 {
+        font-size: 12px;
+    }
+
+    .header_all p {
+        font-size: 9px;
+    }
+
+    .main-content {
+        height: 80px;
+        margin-bottom: 0%;
+    }
+
+    a p {
+        display: none;
+    }
+}

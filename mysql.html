@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL Tutorial - KAT-PROGRAMMERS</title>
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+        <!-- Header -->
+        <header class="border-b border-white/10 backdrop-blur-md bg-white/5">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <button class="btn btn-ghost" onclick="navigateToHome()">
+                            ← Back to Home
+                        </button>
+                        <div class="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-lg">
+                            🗄️
+                        </div>
+                        <h1 class="text-2xl font-bold text-white">MySQL Tutorial</h1>
+                    </div>
+                    <div class="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-full">
+                        <span class="text-white font-medium">Intermediate Level</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sticky top-8">
+                        <h3 class="text-white text-lg font-bold mb-4">Course Contents</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-xs text-white font-bold">1</div>
+                                    <h4 class="text-white font-medium text-sm">Database Basics</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">What is a Database?</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">MySQL Installation</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Basic SQL Syntax</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Database Design</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-xs text-white font-bold">2</div>
+                                    <h4 class="text-white font-medium text-sm">CRUD Operations</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">SELECT Queries</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">INSERT Data</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">UPDATE Records</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">DELETE Data</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-xs text-white font-bold">3</div>
+                                    <h4 class="text-white font-medium text-sm">Advanced Queries</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">JOINs</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Subqueries</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Aggregate Functions</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Indexes</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-xs text-white font-bold">4</div>
+                                    <h4 class="text-white font-medium text-sm">Database Management</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Stored Procedures</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Triggers</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">User Management</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Backup & Recovery</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Introduction -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
+                        <h2 class="text-white text-3xl font-bold mb-4">Learn MySQL - Database Management System</h2>
+                        <p class="text-gray-300 text-lg mb-6">
+                            Master database management with MySQL. Learn SQL queries, database design, and data relationships for backend development.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">📚</div>
+                                <div class="text-white font-semibold">22 Lessons</div>
+                                <div class="text-gray-400 text-sm">Comprehensive curriculum</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">🗄️</div>
+                                <div class="text-white font-semibold">Database Design</div>
+                                <div class="text-gray-400 text-sm">Proper data modeling</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">⚡</div>
+                                <div class="text-white font-semibold">Performance</div>
+                                <div class="text-gray-400 text-sm">Optimized queries</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-white text-xl mb-4">What You'll Learn:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• SQL fundamentals and query syntax</li>
+                                <li>• Database design and normalization</li>
+                                <li>• Advanced queries with JOINs and subqueries</li>
+                                <li>• Data relationships and foreign keys</li>
+                                <li>• Database optimization and indexing</li>
+                                <li>• User management and security</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Code Examples -->
+                    <div class="space-y-6">
+                        <!-- Example 1 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Creating Database and Tables</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="-- Create database
+CREATE DATABASE school_management;
+USE school_management;
+
+-- Create students table
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    age INT,
+    enrollment_date DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create courses table
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    course_code VARCHAR(10) UNIQUE,
+    credits INT DEFAULT 3,
+    instructor VARCHAR(100)
+);"
+                                    data-title="Creating Database and Tables">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Setting up database structure with tables</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-cyan-300 text-sm">-- Create database
+CREATE DATABASE school_management;
+USE school_management;
+
+-- Create students table
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    age INT,
+    enrollment_date DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create courses table
+CREATE TABLE courses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    course_code VARCHAR(10) UNIQUE,
+    credits INT DEFAULT 3,
+    instructor VARCHAR(100)
+);</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 2 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">CRUD Operations</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="-- INSERT data
+INSERT INTO students (first_name, last_name, email, age, enrollment_date)
+VALUES 
+    ('John', 'Doe', 'john.doe@email.com', 20, '2024-01-15'),
+    ('Jane', 'Smith', 'jane.smith@email.com', 19, '2024-01-16'),
+    ('Bob', 'Johnson', 'bob.johnson@email.com', 21, '2024-01-17');
+
+-- SELECT data
+SELECT * FROM students;
+SELECT first_name, last_name, email FROM students WHERE age > 19;
+
+-- UPDATE data
+UPDATE students 
+SET age = 22 
+WHERE email = 'bob.johnson@email.com';
+
+-- DELETE data
+DELETE FROM students WHERE age < 18;"
+                                    data-title="CRUD Operations">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Basic database operations - Create, Read, Update, Delete</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-cyan-300 text-sm">-- INSERT data
+INSERT INTO students (first_name, last_name, email, age, enrollment_date)
+VALUES 
+    ('John', 'Doe', 'john.doe@email.com', 20, '2024-01-15'),
+    ('Jane', 'Smith', 'jane.smith@email.com', 19, '2024-01-16'),
+    ('Bob', 'Johnson', 'bob.johnson@email.com', 21, '2024-01-17');
+
+-- SELECT data
+SELECT * FROM students;
+SELECT first_name, last_name, email FROM students WHERE age > 19;
+
+-- UPDATE data
+UPDATE students 
+SET age = 22 
+WHERE email = 'bob.johnson@email.com';
+
+-- DELETE data
+DELETE FROM students WHERE age < 18;</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 3 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">JOINs and Relationships</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="-- Create enrollment table for many-to-many relationship
+CREATE TABLE enrollments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    grade CHAR(2),
+    enrollment_date DATE,
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    FOREIGN KEY (course_id) REFERENCES courses(id)
+);
+
+-- INNER JOIN - Students with their enrollments
+SELECT 
+    s.first_name,
+    s.last_name,
+    c.course_name,
+    e.grade
+FROM students s
+INNER JOIN enrollments e ON s.id = e.student_id
+INNER JOIN courses c ON e.course_id = c.id;
+
+-- LEFT JOIN - All students, including those not enrolled
+SELECT 
+    s.first_name,
+    s.last_name,
+    c.course_name
+FROM students s
+LEFT JOIN enrollments e ON s.id = e.student_id
+LEFT JOIN courses c ON e.course_id = c.id;"
+                                    data-title="JOINs and Relationships">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Connecting tables with JOINs and foreign keys</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-cyan-300 text-sm">-- Create enrollment table for many-to-many relationship
+CREATE TABLE enrollments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    grade CHAR(2),
+    enrollment_date DATE,
+    FOREIGN KEY (student_id) REFERENCES students(id),
+    FOREIGN KEY (course_id) REFERENCES courses(id)
+);
+
+-- INNER JOIN - Students with their enrollments
+SELECT 
+    s.first_name,
+    s.last_name,
+    c.course_name,
+    e.grade
+FROM students s
+INNER JOIN enrollments e ON s.id = e.student_id
+INNER JOIN courses c ON e.course_id = c.id;
+
+-- LEFT JOIN - All students, including those not enrolled
+SELECT 
+    s.first_name,
+    s.last_name,
+    c.course_name
+FROM students s
+LEFT JOIN enrollments e ON s.id = e.student_id
+LEFT JOIN courses c ON e.course_id = c.id;</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 4 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Aggregate Functions and Grouping</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="-- Aggregate functions
+SELECT COUNT(*) as total_students FROM students;
+SELECT AVG(age) as average_age FROM students;
+SELECT MIN(age) as youngest, MAX(age) as oldest FROM students;
+
+-- GROUP BY with aggregate functions
+SELECT 
+    c.course_name,
+    COUNT(e.student_id) as enrolled_students,
+    AVG(CASE 
+        WHEN e.grade = 'A' THEN 4
+        WHEN e.grade = 'B' THEN 3
+        WHEN e.grade = 'C' THEN 2
+        WHEN e.grade = 'D' THEN 1
+        ELSE 0 
+    END) as average_gpa
+FROM courses c
+LEFT JOIN enrollments e ON c.id = e.course_id
+GROUP BY c.id, c.course_name
+HAVING enrolled_students > 0;
+
+-- Subquery example
+SELECT first_name, last_name, age
+FROM students
+WHERE age > (SELECT AVG(age) FROM students);"
+                                    data-title="Aggregate Functions and Grouping">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Advanced queries with calculations and data analysis</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-cyan-300 text-sm">-- Aggregate functions
+SELECT COUNT(*) as total_students FROM students;
+SELECT AVG(age) as average_age FROM students;
+SELECT MIN(age) as youngest, MAX(age) as oldest FROM students;
+
+-- GROUP BY with aggregate functions
+SELECT 
+    c.course_name,
+    COUNT(e.student_id) as enrolled_students,
+    AVG(CASE 
+        WHEN e.grade = 'A' THEN 4
+        WHEN e.grade = 'B' THEN 3
+        WHEN e.grade = 'C' THEN 2
+        WHEN e.grade = 'D' THEN 1
+        ELSE 0 
+    END) as average_gpa
+FROM courses c
+LEFT JOIN enrollments e ON c.id = e.course_id
+GROUP BY c.id, c.course_name
+HAVING enrolled_students > 0;
+
+-- Subquery example
+SELECT first_name, last_name, age
+FROM students
+WHERE age > (SELECT AVG(age) FROM students);</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Completion -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
+                        <h3 class="text-white text-xl font-bold mb-2">🎉 Congratulations!</h3>
+                        <p class="text-gray-300 mb-4">
+                            You've completed all the programming language tutorials! You now have a solid foundation in web development, system programming, and database management.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToHome()">
+                                🏠 Back to Home
+                            </button>
+                            <button 
+                                class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="alert('Certificate feature coming soon!')">
+                                📜 Get Certificate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

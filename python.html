@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tutorial - KAT-PROGRAMMERS</title>
+    <link rel="stylesheet" href="courses.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <!-- Header -->
+        <header class="border-b border-white/10 backdrop-blur-md bg-white/5">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <button class="btn btn-ghost" onclick="navigateToHome()">
+                            ← Back to Home
+                        </button>
+                        <div class="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-lg">
+                            🐍
+                        </div>
+                        <h1 class="text-2xl font-bold text-white">Python Tutorial</h1>
+                    </div>
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 px-4 py-2 rounded-full">
+                        <span class="text-white font-medium">Beginner Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 sticky top-8">
+                        <h3 class="text-white text-lg font-bold mb-4">Course Contents</h3>
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-xs text-white font-bold">1</div>
+                                    <h4 class="text-white font-medium text-sm">Python Basics</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Python Syntax</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Variables</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Data Types</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Operators</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-xs text-white font-bold">2</div>
+                                    <h4 class="text-white font-medium text-sm">Data Structures</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Lists</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Dictionaries</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Tuples</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Sets</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-xs text-white font-bold">3</div>
+                                    <h4 class="text-white font-medium text-sm">Functions & OOP</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">Functions</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Classes</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Inheritance</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Modules</li>
+                                </ul>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-6 h-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-xs text-white font-bold">4</div>
+                                    <h4 class="text-white font-medium text-sm">Advanced Python</h4>
+                                </div>
+                                <ul class="ml-8 space-y-1 text-gray-400 text-xs">
+                                    <li class="hover:text-white cursor-pointer transition-colors">File Handling</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Error Handling</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Libraries</li>
+                                    <li class="hover:text-white cursor-pointer transition-colors">Web Scraping</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Introduction -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mb-8">
+                        <h2 class="text-white text-3xl font-bold mb-4">Learn Python - The Most Popular Programming Language</h2>
+                        <p class="text-gray-300 text-lg mb-6">
+                            Python is perfect for beginners and professionals alike. Learn data science, web development, automation, and AI/ML.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">📚</div>
+                                <div class="text-white font-semibold">35 Lessons</div>
+                                <div class="text-gray-400 text-sm">Comprehensive curriculum</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">🤖</div>
+                                <div class="text-white font-semibold">AI/ML Ready</div>
+                                <div class="text-gray-400 text-sm">Machine learning prep</div>
+                            </div>
+                            <div class="text-center p-4 bg-white/5 rounded-lg">
+                                <div class="text-2xl mb-2">📊</div>
+                                <div class="text-white font-semibold">Data Science</div>
+                                <div class="text-gray-400 text-sm">Analytics & visualization</div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-white text-xl mb-4">What You'll Learn:</h3>
+                            <ul class="text-gray-300 space-y-2">
+                                <li>• Python syntax and programming fundamentals</li>
+                                <li>• Data structures and algorithm implementation</li>
+                                <li>• Object-oriented programming concepts</li>
+                                <li>• File handling and data processing</li>
+                                <li>• Popular libraries for data science and web development</li>
+                                <li>• Best practices for clean, readable code</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Code Examples -->
+                    <div class="space-y-6">
+                        <!-- Example 1 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Python Basics</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="# Variables and data types
+name = \"Alice\"
+age = 25
+height = 5.6
+is_student = True
+
+# Basic operations
+numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+average = total / len(numbers)
+
+# Print statements
+print(f\"Name: {name}\")
+print(f\"Age: {age}\")
+print(f\"Average of numbers: {average}\")"
+                                    data-title="Python Basics">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Python syntax and basic operations</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-purple-400 text-sm"># Variables and data types
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+
+# Basic operations
+numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+average = total / len(numbers)
+
+# Print statements
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Average of numbers: {average}")</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 2 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Lists and Dictionaries</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="# Working with lists
+fruits = [\"apple\", \"banana\", \"orange\", \"grape\"]
+fruits.append(\"kiwi\")
+fruits.remove(\"banana\")
+
+# List comprehension
+squared_numbers = [x**2 for x in range(1, 6)]
+
+# Working with dictionaries
+student = {
+    \"name\": \"John\",
+    \"age\": 20,
+    \"grades\": [85, 92, 78, 96],
+    \"is_enrolled\": True
+}
+
+# Accessing dictionary values
+print(f\"Student: {student['name']}\")
+print(f\"Average grade: {sum(student['grades']) / len(student['grades'])}\")"
+                                    data-title="Lists and Dictionaries">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Working with Python data structures</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-purple-400 text-sm"># Working with lists
+fruits = ["apple", "banana", "orange", "grape"]
+fruits.append("kiwi")
+fruits.remove("banana")
+
+# List comprehension
+squared_numbers = [x**2 for x in range(1, 6)]
+
+# Working with dictionaries
+student = {
+    "name": "John",
+    "age": 20,
+    "grades": [85, 92, 78, 96],
+    "is_enrolled": True
+}
+
+# Accessing dictionary values
+print(f"Student: {student['name']}")
+print(f"Average grade: {sum(student['grades']) / len(student['grades'])}")</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 3 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">Functions and Classes</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="# Functions
+def calculate_area(length, width):
+    \"\"\"Calculate the area of a rectangle\"\"\"
+    return length * width
+
+def greet(name, age=None):
+    if age:
+        return f\"Hello, {name}! You are {age} years old.\"
+    return f\"Hello, {name}!\"
+
+# Classes
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.mileage = 0
+    
+    def drive(self, miles):
+        self.mileage += miles
+        print(f\"Drove {miles} miles. Total mileage: {self.mileage}\")
+    
+    def __str__(self):
+        return f\"{self.year} {self.make} {self.model}\"
+
+# Usage
+my_car = Car(\"Toyota\", \"Camry\", 2020)
+print(my_car)
+my_car.drive(100)"
+                                    data-title="Functions and Classes">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Object-oriented programming in Python</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-purple-400 text-sm"># Functions
+def calculate_area(length, width):
+    """Calculate the area of a rectangle"""
+    return length * width
+
+def greet(name, age=None):
+    if age:
+        return f"Hello, {name}! You are {age} years old."
+    return f"Hello, {name}!"
+
+# Classes
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.mileage = 0
+    
+    def drive(self, miles):
+        self.mileage += miles
+        print(f"Drove {miles} miles. Total mileage: {self.mileage}")
+    
+    def __str__(self):
+        return f"{self.year} {self.make} {self.model}"
+
+# Usage
+my_car = Car("Toyota", "Camry", 2020)
+print(my_car)
+my_car.drive(100)</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Example 4 -->
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-white text-xl font-bold">File Handling and Libraries</h3>
+                                <button 
+                                    class="btn btn-outline btn-sm copy-btn" 
+                                    data-code="import json
+import requests
+from datetime import datetime
+
+# File handling
+def save_data(data, filename):
+    with open(filename, 'w') as file:
+        json.dump(data, file, indent=2)
+
+def load_data(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+
+# Working with APIs
+def get_weather(city):
+    # Example API call (requires API key)
+    url = f\"https://api.example.com/weather?q={city}\"
+    try:
+        response = requests.get(url)
+        return response.json()
+    except requests.RequestException:
+        return {\"error\": \"Failed to fetch weather data\"}
+
+# Data processing
+def process_sales_data(sales):
+    total_sales = sum(sale['amount'] for sale in sales)
+    average_sale = total_sales / len(sales) if sales else 0
+    
+    return {
+        'total': total_sales,
+        'average': average_sale,
+        'count': len(sales),
+        'timestamp': datetime.now().isoformat()
+    }"
+                                    data-title="File Handling and Libraries">
+                                    📋 Copy
+                                </button>
+                            </div>
+                            <p class="text-gray-300 mb-4">Working with files, APIs, and external libraries</p>
+                            <div class="bg-gray-900 rounded-lg p-4 overflow-x-auto">
+                                <pre><code class="text-purple-400 text-sm">import json
+import requests
+from datetime import datetime
+
+# File handling
+def save_data(data, filename):
+    with open(filename, 'w') as file:
+        json.dump(data, file, indent=2)
+
+def load_data(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return {}
+
+# Working with APIs
+def get_weather(city):
+    # Example API call (requires API key)
+    url = f"https://api.example.com/weather?q={city}"
+    try:
+        response = requests.get(url)
+        return response.json()
+    except requests.RequestException:
+        return {"error": "Failed to fetch weather data"}
+
+# Data processing
+def process_sales_data(sales):
+    total_sales = sum(sale['amount'] for sale in sales)
+    average_sale = total_sales / len(sales) if sales else 0
+    
+    return {
+        'total': total_sales,
+        'average': average_sale,
+        'count': len(sales),
+        'timestamp': datetime.now().isoformat()
+    }</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
+                        <h3 class="text-white text-xl font-bold mb-2">Complete Your Journey</h3>
+                        <p class="text-gray-300 mb-4">
+                            Finish your programming education with database management using MySQL!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button 
+                                class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                                onclick="navigateToTutorial('mysql-tutorial.html')">
+                                Final: Learn MySQL →
+                            </button>
+                            <button 
+                                class="btn btn-outline"
+                                onclick="navigateToHome()">
+                                Back to All Courses
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
