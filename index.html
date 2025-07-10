@@ -446,8 +446,8 @@
     <form id="loginForm">
         <fieldset class="set1">
             <h3>LOG IN</h3>
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="email" name="email" id="loginemail" placeholder="E-mail" required>
+            <input type="password" name="password" id="loginpassword" placeholder="Password" required>
             <button style="width: 90%; height: 1cm; font-size: 15px; margin-top: 5%;" type="submit" value="LOG IN" class="login"> LOG IN <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></button>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -469,8 +469,8 @@
   document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+    const email = document.getElementById("loginemail").value.trim();
+    const password = document.getElementById("loginpassword").value.trim();
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
