@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="autocomplete" content="off">
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Kat-Programmers Log in</title>
@@ -54,7 +58,41 @@
         console.error(error.code, error.message);
       });
   });
+  (function() {
+            emailjs.init("6CSR1CAXwOHcVmcbZ"); // Replace with your EmailJS User ID
 
+        })();
+
+        function sendEmail() {
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const dob = document.getElementById('dob').value;
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Reset messages
+            document.getElementById('successMessage').classList.add('d-none');
+            document.getElementById('errorMessage').classList.add('d-none');
+
+            // EmailJS parameters
+            const templateParams = {
+                first_name: firstName,
+                last_name: lastName,
+                dob: dob,
+                email: email,
+                to: 'katprogrammers@gmail.com',
+            };
+
+            // Send email
+            emailjs.send('service_moy734x', 'template_moy734x', templateParams)
+                .then(function(response) {
+                    successMessage.style.display = 'block';
+                }, function(error) {
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                });
+        }
 </script>
 
     <style>
@@ -480,6 +518,7 @@
       .catch((error) => {
         const errorMessage = error.message;
         document.getElementById("error").innerText = "❌ " + errorMessage;
+        document.getElementById("error").style.display = "block";
         console.error(error.code, error.message);
       });
   });
@@ -489,8 +528,8 @@
         </fieldset>
         <h6>© 2025 Kat Programmers, All Rights Reserved.</h6>
     </form>
-   
-<script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
         // Google Sign-In initialization
         function handleCredentialResponse(response) {
             console.log("Encoded JWT ID token: " + response.credential);
