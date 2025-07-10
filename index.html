@@ -10,15 +10,10 @@
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Kat-Programmers Log in</title>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
-<script>
-    firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-        // Initialize EmailJS
-        emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS User ID
-</script>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
   import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
@@ -36,7 +31,7 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  document.querySelector('.form2 input[type="submit"]').addEventListener('click', function (event) {
+  document.querySelector('.form2 button[type="submit"]').addEventListener('click', function (event) {
     event.preventDefault();
 
     const email = document.getElementById('email').value.trim();
@@ -63,12 +58,43 @@
         console.error(error.code, error.message);
       });
   });
-</script><script>
-    (function(){
-        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-    })();
+  (function() {
+            emailjs.init("6CSR1CAXwOHcVmcbZ"); // Replace with your EmailJS User ID
+
+        })();
+
+        function sendEmail() {
+            // Get form values
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const dob = document.getElementById('dob').value;
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Reset messages
+            document.getElementById('successMessage').classList.add('d-none');
+            document.getElementById('errorMessage').classList.add('d-none');
+
+            // EmailJS parameters
+            const templateParams = {
+                first_name: firstName,
+                last_name: lastName,
+                dob: dob,
+                email: email,
+                to: 'katprogrammers@gmail.com',
+            };
+
+            // Send email
+            emailjs.send('service_moy734x', 'template_moy734x', templateParams)
+                .then(function(response) {
+                    successMessage.style.display = 'block';
+                }, function(error) {
+                    successMessage.style.display = 'none';
+                    errorMessage.style.display = 'block';
+                });
+        }
 </script>
-    
+
     <style>
         body {
             background-color: black;
@@ -104,13 +130,16 @@
         h6 {
             color: aliceblue;
         }
+        h3{
+            font-size: 30px;
+        }
         input {
-            font-size: 10px;
+            font-size: 15px;
             background-color: black;
             border: none;
             color: aliceblue;
             width: 90%;
-            height: 0.8cm;
+            height: 1cm;
             margin-top: 5%;
             border-radius: 5px;
         }
@@ -131,6 +160,9 @@
             border-color: rgb(0, 0, 0);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             box-shadow: 0px 0px 5px 5px rgb(1, 1, 66);
+        }
+        .set1 p{
+            font-size: 15px;
         }
         .set1 a {
             color: gold;
@@ -412,46 +444,15 @@
         <div class="form21">
             <fieldset class="set1">
                 <h3 style="background-image: linear-gradient(45deg, blue, rgb(255, 0, 217) 60%); color: transparent; -webkit-background-clip: text;">SIGN UP for free</h3>
-                <input type="text" name="fname" id="fname" placeholder="First name">
-                <input type="text" name="lname" id="lname" placeholder="Last name">
-                <input type="date" name="date" id="date" placeholder="Birth date">
+                <input type="text" name="firstname" id="firstname" placeholder="First name" required>
+                <input type="text" name="lastname" id="lastname" placeholder="Last name" required>
+                <input type="date" name="dob" id="dob" placeholder="Birth date" required>
                 <input type="email" name="email" id="email" placeholder="E-mail" required>
                 <input type="password" name="password" id="password" placeholder="Password" required>
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
-                <input type="submit" value="SIGN UP" class="login">
-                <h4>or</h4>
-                <h3>Sign Up with :</h3>
-                <div class="g_id_signin" data-type="standard" data-text="signup_with"  id="google-signup"></div>
-                <script>
-                    // Handle Sign-Up Form Submission (EmailJS)
-        document.getElementById("form2")?.addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Collect form data
-            const formData = {
-                username: document.getElementById("username")?.value,
-                email: document.getElementById("email")?.value,
-                password: document.getElementById("password")?.value
-            };
-
-            // Send email using EmailJS
-            emailjs.send("service_3x03x03", "template_3x03x03", {
-                to_email: "katprogrammers@gmail.com", // Replace with your Gmail address
-                username: formData.username,
-                email: formData.email,
-                password: formData.password // Note: Sending passwords via email is insecure
-            })
-            .then(function(response) {
-                console.log("Email sent successfully!", response.status, response.text);
-                alert("Sign-up information sent successfully!");
-            }, function(error) {
-                console.error("Failed to send email:", error);
-                alert("Failed to send sign-up information. Please try again.");
-            });
-        });
-                </script>
-                <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
-                <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
+                <button style="width: 90%; height: 1cm; font-size: 15px; margin-top: 5%;" type="submit" value="SIGN UP" class="login" onclick="sendEmail()"><i class="fa-solid fa-user-plus fa-bounce"></i>  Sign Up</button>
+                <div id="successMessage" style="display: none; color: rgb(47, 255, 57);" class="d-none">Email sent successfully!</div>
+                <div id="errorMessage" style="display: none; color: red;" class="d-none">Error sending email. Please try again.</div>
             </fieldset>
         </div>
     </div>
@@ -463,7 +464,7 @@
         <div>
             <h2>Welcome</h2>
             <p>This website will help you to learn all courses of web development, designing and other programming languages. <br>The examples of programming languages are <strong>HTML</strong>, <strong>CSS</strong>, <strong>JAVASCRIPT</strong>, <strong>MySql</strong>, <strong>PHP</strong>, <strong>PYTHON</strong>, and <strong>C++</strong> <br> <h3 style="color: red; text-decoration: line-through;">Pay $7/mo</h3> <h3 style="color: rgb(47, 255, 57);">Free</h3></p>
-            <a href="#"><button type="button" onclick="openform()">SIGN UP for free</button></a>
+            <a href="#"><button type="button" onclick="openform()"><i class="fa-solid fa-user-plus fa-bounce"></i>   SIGN UP for free</button></a>
             <div class="div1">
                 <h2>Address & Contact us: </h2>
                 <ul>
@@ -485,7 +486,7 @@
             <h3>LOG IN</h3>
             <input type="email" name="email" id="email" placeholder="E-mail" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
-            <input type="submit" value="LOG IN" class="login">
+            <button style="width: 90%; height: 1cm; font-size: 15px; margin-top: 5%;" type="submit" value="LOG IN" class="login"> LOG IN <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></button>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
   import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
@@ -524,108 +525,6 @@
 </script>
             <p id="error" class="error">Invalid username or password</p>
             <p>If you don't have account, <a href="#" onclick="openform()">create an account.</a></p>
-        </fieldset>
-        <h4>or</h4>
-        <fieldset class="set2">
-            <h3>Log in with :</h3>
-            <div class="g_id_signin" data-type="standard" data-text="signin_with" id="google-login"></div>
-            <script>
-                // Handle Login Form Submission (EmailJS)
-        document.getElementById("loginform")?.addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Collect form data
-            const formData = {
-                email: document.getElementById("email")?.value,
-                password: document.getElementById("password")?.value
-            };
-
-            // Send email using EmailJS
-            emailjs.send("service_3x03x03", "template_3x03x03", {
-                to_email: "katprogrammers@gmail.com", // Replace with your Gmail address
-                email: formData.email,
-                password: formData.password // Note: Sending passwords via email is insecure
-            })
-            .then(function(response) {
-                console.log("Email sent successfully!", response.status, response.text);
-                alert("Login information sent successfully!");
-            }, function(error) {
-                console.error("Failed to send email:", error);
-                alert("Failed to send login information. Please try again.");
-            });
-        });
-         // Google Sign-In/Sign-Up
-        const provider = new firebase.auth.GoogleAuthProvider();
-        provider.setCustomParameters({ prompt: "select_account" });
-
-        // Google Sign-Up
-        document.getElementById("google-signup")?.addEventListener("click", function() {
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    const user = result.user;
-                    const additionalUserInfo = firebase.auth().getAdditionalUserInfo(result);
-                    const formData = {
-                        username: user.displayName || "Google User",
-                        email: user.email,
-                        password: "Google Sign-In" // Placeholder for EmailJS
-                    };
-
-                    // Send user info to Gmail via EmailJS
-                    emailjs.send("service_3x03x03", "template_3x03x03", {
-                        to_email: "katprogrammers@gmail.com",
-                        username: formData.username,
-                        email: formData.email,
-                        password: formData.password
-                    })
-                    .then(() => {
-                        console.log("Google Sign-Up email sent successfully!");
-                        alert(`Signed up with Google: ${user.email}`);
-                    }, (error) => {
-                        console.error("Failed to send Google Sign-Up email:", error);
-                        alert("Failed to send Google Sign-Up information.");
-                    });
-                })
-                .catch((error) => {
-                    console.error("Google Sign-Up error:", error);
-                    alert(`Google Sign-Up failed: ${error.message}`);
-                });
-        });
-
-        // Google Login
-        document.getElementById("google-login")?.addEventListener("click", function() {
-            auth.signInWithPopup(provider)
-                .then((result) => {
-                    const user = result.user;
-                    const additionalUserInfo = firebase.auth().getAdditionalUserInfo(result);
-                    const formData = {
-                        username: user.displayName || "Google User",
-                        email: user.email,
-                        password: "Google Sign-In" // Placeholder for EmailJS
-                    };
-
-                    // Send user info to Gmail via EmailJS
-                    emailjs.send("service_3x03x03", "template_3x03x03", {
-                        to_email: "katprogrammers@gmail.com",
-                        username: formData.username,
-                        email: formData.email,
-                        password: formData.password
-                    })
-                    .then(() => {
-                        console.log("Google Login email sent successfully!");
-                        alert(`Logged in with Google: ${user.email}`);
-                    }, (error) => {
-                        console.error("Failed to send Google Login email:", error);
-                        alert("Failed to send Google Login information.");
-                    });
-                })
-                .catch((error) => {
-                    console.error("Google Login error:", error);
-                    alert(`Google Login failed: ${error.message}`);
-                });
-        });
-            </script>
-            <a href="#"><button type="button" class="button2"><i class="fa-brands fa-facebook-f"></i> Facebook</button></a>
-            <a href="#"><button type="button" class="button3"><i class="fa-brands fa-apple"></i> Apple account</button></a>
         </fieldset>
         <h6>© 2025 Kat Programmers, All Rights Reserved.</h6>
     </form>
@@ -679,12 +578,6 @@
     </script>
 
     
-
-
-    
-
-
-   
     
 </body>
 </html>
