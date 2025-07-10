@@ -490,6 +490,53 @@
         <h6>© 2025 Kat Programmers, All Rights Reserved.</h6>
     </form>
    
+<script>
+        // Google Sign-In initialization
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // TODO: Send response.credential to your backend for verification
+            // Example: Redirect to home.html after successful sign-in
+            window.location.href = "home.html";
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: '1082724905494-obn6lqt1elqmurbjbpd8i9fdjtpcm8ps.apps.googleusercontent.com', // Replace with your Google Client ID
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.querySelector(".set2 .g_id_signin"),
+                { 
+                    type: "standard",
+                    theme: "outline",
+                    size: "large",
+                    text: "signin_with",
+                    shape: "rectangular"
+                }
+            );
+            google.accounts.id.renderButton(
+                document.querySelector(".form21 .g_id_signin"),
+                { 
+                    type: "standard",
+                    theme: "outline",
+                    size: "large",
+                    text: "signup_with",
+                    shape: "rectangular"
+                }
+            );
+        };
+
+        // Existing form toggle functions
+        function openform() {
+            document.getElementById("form2").style.display = "block";
+        }
+
+        function closeform() {
+            document.getElementById("form2").style.display = "none";
+        }
+
+
+    </script>
 
     
     
