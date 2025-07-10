@@ -444,7 +444,7 @@
         <video src="sample.mp4" muted autoplay loop></video>
     </div>
     <form id="loginForm">
-        <fieldset class="set1" id="setForm">
+        <fieldset class="set1">
             <h3>LOG IN</h3>
             <input type="email" name="email" id="email" placeholder="E-mail" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
@@ -466,7 +466,7 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
 
-  document.getElementById("setForm").addEventListener("submit", function (event) {
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
     const email = document.getElementById("email").value.trim();
@@ -480,6 +480,7 @@
       .catch((error) => {
         const errorMessage = error.message;
         document.getElementById("error").innerText = "❌ " + errorMessage;
+        error.stule.display = 'block';
         document.getElementById("error").style.display = "block";
         console.error(error.code, error.message);
       });
