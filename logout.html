@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logging Out</title>
   <!-- Prevent caching of the page -->
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <meta name="autocomplete" content="off">
+
     <style>
         body {
             background-color: black;
@@ -44,16 +41,6 @@
 
   <script>
     function logout() {
-      // Clear all client-side storage
-      localStorage.clear();
-      sessionStorage.clear();
-
-      // Clear all cookies
-      document.cookie.split(";").forEach(function(c) {
-        document.cookie = c
-          .replace(/^ +/, "")
-          .replace(/=.*/, "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;SameSite=Strict");
-      });
 
       // Unregister service workers (if any)
       if ('serviceWorker' in navigator) {
@@ -65,16 +52,16 @@
       }
 
       // Replace current history state with login page
-      window.history.replaceState(null, null, "https://katprogrammers.vercel.app/");
+      window.history.replaceState(null, null, "index.html");
 
       // Redirect to login page immediately
       setTimeout(function() {
-        window.location.replace("https://katprogrammers.vercel.app/");
+        window.location.replace("https://katprogrammers.vercel.app");
       }, 2000);
 
       // Prevent back button navigation
       window.onpopstate = function(event) {
-        window.location.replace("https://katprogrammers.vercel.app/")
+        window.location.replace("index.html")
 
       };
     }
