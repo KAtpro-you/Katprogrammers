@@ -65,16 +65,16 @@
       }
 
       // Replace current history state with login page
-      window.history.replaceState(null, null, "index.html");
+      window.history.replaceState(null, null, "https://katprogrammers.vercel.app/");
 
       // Redirect to login page immediately
       setTimeout(function() {
-        window.location.replace("index.html");
+        window.location.replace("https://katprogrammers.vercel.app/");
       }, 2000);
 
       // Prevent back button navigation
       window.onpopstate = function(event) {
-        window.location.replace("index.html")
+        window.location.replace("https://katprogrammers.vercel.app/")
 
       };
     }
