@@ -10,91 +10,25 @@
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Kat-Programmers Log in</title>
+    <script src="forgot-password.js"></script>
+  <script src="firebase-app-compat.js"></script>
+  <script src="firebase-auth-compat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyD-gCHlAYiX3zJiAeSSSNbQ1qhXJMHLeSQ",
-    authDomain: "katprogrammers-1e30e.firebaseapp.com",
-    projectId: "katprogrammers-1e30e",
-    storageBucket: "katprogrammers-1e30e.appspot.com",
-    messagingSenderId: "20873434906",
-    appId: "1:20873434906:web:9f78f7f25768fb73f37ea3",
-    measurementId: "G-9KXJPD09QZ"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-
-  document.querySelector('.form2 button[type="submit"]').addEventListener('click', function (event) {
-    event.preventDefault();
-
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value.trim();
-    const confirmPassword = document.getElementById('confirmPassword').value.trim();
-
-    if (!email || !password) {
-      alert("Email and password are required.");
-      return;
+<script type="module" src="firebase-init.js"></script>
+<script type="module" src="signup.js"></script>
+<script type="module" src="login.js"></script>
+<script type="module" src="forgot-password.js"></script>
+<script>
+    function openform(){
+        form2.style.display = "block";
     }
-
-    if (password !== confirmPassword) {
-      alert("Passwords do not match.");
-      return;
+    function closeform(){
+        form2.style.display = "none";
     }
-
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        alert("✅ Account created successfully!");
-        document.getElementById("form2").style.display = "none";
-      })
-      .catch((error) => {
-        alert("❌ Error: " + error.message);
-        console.error(error.code, error.message);
-      });
-  });
-  (function() {
-            emailjs.init("6CSR1CAXwOHcVmcbZ"); // Replace with your EmailJS User ID
-
-        })();
-
-        function sendEmail() {
-            // Get form values
-            const firstName = document.getElementById('firstName').value.trim();
-            const lastName = document.getElementById('lastName').value.trim();
-            const dob = document.getElementById('dob').value;
-            const email = document.getElementById('email').value.trim();
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            // Reset messages
-            document.getElementById('successMessage').classList.add('d-none');
-            document.getElementById('errorMessage').classList.add('d-none');
-
-            // EmailJS parameters
-            const templateParams = {
-                first_name: firstName,
-                last_name: lastName,
-                dob: dob,
-                email: email,
-                to: 'katprogrammers@gmail.com',
-            };
-
-            // Send email
-            emailjs.send('service_moy734x', 'template_moy734x', templateParams)
-                .then(function(response) {
-                    successMessage.style.display = 'block';
-                }, function(error) {
-                    successMessage.style.display = 'none';
-                    errorMessage.style.display = 'block';
-                });
-        }
 </script>
-
     <style>
         body {
             background-color: black;
@@ -213,7 +147,7 @@
             color: rgb(191, 197, 202);
             transition: 0.3s;
         }
-        .set1 .login {
+         .login {
             background-image: linear-gradient(45deg, green, rgb(255, 208, 0));
             color: black;
             font-weight: bolder;
@@ -440,15 +374,15 @@
 </head>
 <body>
     <div class="form2" id="form2" style="display: none;">
-        <p style="position: fixed; color: aliceblue; top: 4%; right: 5%; cursor: pointer;" onclick="closeform()">X</p>
+        <p style="position: fixed; color: aliceblue; top: 4%; right: 5%; cursor: pointer;" onclick="closeform()"><i style="font-size: 30px;" class="fa-solid fa-xmark"></i></p>
         <div class="form21">
             <fieldset class="set1">
                 <h3 style="background-image: linear-gradient(45deg, blue, rgb(255, 0, 217) 60%); color: transparent; -webkit-background-clip: text;">SIGN UP for free</h3>
                 <input type="text" name="firstname" id="firstname" placeholder="First name" required>
                 <input type="text" name="lastname" id="lastname" placeholder="Last name" required>
                 <input type="date" name="dob" id="dob" placeholder="Birth date" required>
-                <input type="email" name="email" id="email" placeholder="E-mail" required>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <input type="email" name="email" id="signupEmail" placeholder="E-mail" required>
+                <input type="password" name="password" id="signupPassword placeholder="Password" required>
                 <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
                 <button style="width: 90%; height: 1cm; font-size: 15px; margin-top: 5%;" type="submit" value="SIGN UP" class="login" onclick="sendEmail()"><i class="fa-solid fa-user-plus fa-bounce"></i>  Sign Up</button>
                 <div id="successMessage" style="display: none; color: rgb(47, 255, 57);" class="d-none">Email sent successfully!</div>
@@ -484,8 +418,8 @@
     <form id="loginForm">
         <fieldset class="set1">
             <h3>LOG IN</h3>
-            <input type="email" name="email" id="email" placeholder="E-mail" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="email"    id="loginEmail"    placeholder="E‑mail"   required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
             <button style="width: 90%; height: 1cm; font-size: 15px; margin-top: 5%;" type="submit" value="LOG IN" class="login"> LOG IN <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></button>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -525,57 +459,40 @@
 </script>
             <p id="error" class="error">Invalid username or password</p>
             <p>If you don't have account, <a href="#" onclick="openform()">create an account.</a></p>
+            <p style="text-align:center; font-size:15px; font-family: Arial, Helvetica, sans-serif;">
+  <a href="#" id="forgotPwdLink">Forgot password?</a>
+</p>
+
         </fieldset>
         <h6>© 2025 Kat Programmers, All Rights Reserved.</h6>
     </form>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script>
-        // Google Sign-In initialization
-        function handleCredentialResponse(response) {
-            console.log("Encoded JWT ID token: " + response.credential);
-            // TODO: Send response.credential to your backend for verification
-            // Example: Redirect to home.html after successful sign-in
-            window.location.href = "home.html";
-        }
+            <!-- ==== FORGOT‑PASSWORD POPUP ==== -->
+<div id="forgotBox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:200;">
+    <!-- Firebase SDK -->
 
-        window.onload = function () {
-            google.accounts.id.initialize({
-                client_id: '1082724905494-obn6lqt1elqmurbjbpd8i9fdjtpcm8ps.apps.googleusercontent.com', // Replace with your Google Client ID
-                callback: handleCredentialResponse
-            });
-            google.accounts.id.renderButton(
-                document.querySelector(".set2 .g_id_signin"),
-                { 
-                    type: "standard",
-                    theme: "outline",
-                    size: "large",
-                    text: "signin_with",
-                    shape: "rectangular"
-                }
-            );
-            google.accounts.id.renderButton(
-                document.querySelector(".form21 .g_id_signin"),
-                { 
-                    type: "standard",
-                    theme: "outline",
-                    size: "large",
-                    text: "signup_with",
-                    shape: "rectangular"
-                }
-            );
-        };
+<!-- Load forgot password logic -->
 
-        // Existing form toggle functions
-        function openform() {
-            document.getElementById("form2").style.display = "block";
-        }
+  <div style="font-family: Arial, Helvetica, sans-serif; width:90%; max-width:320px; margin:15% auto; background:#242424; padding:20px; border-radius:8px; text-align:center; color:#fff; font-size: 15px;">
+      <h3 style="margin-top:0;">Reset your password</h3>
 
-        function closeform() {
-            document.getElementById("form2").style.display = "none";
-        }
+      <input id="forgotEmail"
+             type="email"
+             placeholder="Enter your account e‑mail"
+             required
+             style="width:95%; height:32px; margin:12px 0; padding:4px; border-radius:5px; border:none;">
 
+      <br>
+      <button id="sendReset" class="login" style="width:100%; height:30px;">Send reset link <i class="fa-solid fa-paper-plane"></i></button>
 
-    </script>
+      <p id="forgotMsg" style="font-size:15px; color:#ff6961; display:none; font-family: Arial, Helvetica, sans-serif;"></p>
+
+      <p style="margin-top:12px;">
+        <a href="#" id="closeForgot" style="color:gold;">Cancel</a>
+      </p>
+  </div>
+</div>
+
+<!-- ==== /FORGOT‑PASSWORD POPUP ==== -->
 
     
     
