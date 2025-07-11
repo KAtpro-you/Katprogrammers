@@ -421,42 +421,6 @@
             <input type="email"    id="loginEmail"    placeholder="E‑mail"   required>
             <input type="password" id="loginPassword" placeholder="Password" required>
             <button style="width: 90%; height: 1cm; font-size: 15px; margin-top: 5%;" type="submit" value="LOG IN" class="login"> LOG IN <i class="fa-solid fa-right-to-bracket fa-beat-fade"></i></button>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-  import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyD-gCHlAYiX3zJiAeSSSNbQ1qhXJMHLeSQ",
-    authDomain: "katprogrammers-1e30e.firebaseapp.com",
-    projectId: "katprogrammers-1e30e",
-    storageBucket: "katprogrammers-1e30e.appspot.com",
-    messagingSenderId: "20873434906",
-    appId: "1:20873434906:web:9f78f7f25768fb73f37ea3",
-    measurementId: "G-9KXJPD09QZ"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-
-  document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const email = document.getElementById("loginemail").value.trim();
-    const password = document.getElementById("loginpassword").value.trim();
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Logged in successfully
-        window.location.href = "home.html";
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        document.getElementById("error").innerText = "❌ " + errorMessage;
-        document.getElementById("error").style.display = "block";
-        console.error(error.code, error.message);
-      });
-  });
-</script>
             <p id="error" class="error">Invalid username or password</p>
             <p>If you don't have account, <a href="#" onclick="openform()">create an account.</a></p>
             <p style="text-align:center; font-size:15px; font-family: Arial, Helvetica, sans-serif;">
