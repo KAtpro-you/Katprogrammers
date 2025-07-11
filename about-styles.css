@@ -1,5 +1,52 @@
 @import url("common.css");
 
+/* Logout Button Styles */
+.logout-btn {
+    
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background-image: linear-gradient(45deg, #e207ff, #6200ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn i {
+    font-size: 16px;
+}
+
+body.light-mode .logout-btn {
+    background-image: linear-gradient(45deg, #ff6b6b, #ff3366);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .logout-btn {
+        display: block;
+        top: 45px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .logout-btn i {
+        font-size: 14px;
+    }
+}
+
 /* About Page Specific Styles */
 .header_all {
     margin-left: 5%;
@@ -85,6 +132,7 @@ body.light-mode .cards ul li a {
     }
 
     .header_all {
+        margin-top: 10%;
         margin: 0px;
         text-align: center;
     }
