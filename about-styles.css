@@ -63,48 +63,54 @@ body.light-mode .cards ul li a {
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     .cards {
-        font-size: 10px;
-        margin-top: 0;
+        margin-top: 100px;
+        margin-bottom: 90px;
     }
 
     .cards img {
-        height: 2cm;
-        width: 2cm;
+        height: 3cm;
+        width: 3cm;
     }
 
     .card1, .card2 {
         display: block;
-        margin: 0%;
         width: 90%;
-        margin-top: 15%;
-        margin-left: 5%;
-        box-shadow: none;
+        margin: 5% auto;
+        margin-bottom: 20px;
     }
 
     .cards h1 {
-        font-size: 12px;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
     .header_all {
-        margin: 0%;
-        margin-top: 0%;
-        margin-bottom: 15%;
+        margin: 0px;
+        text-align: center;
     }
 
     .header_all h2 {
-        font-size: 12px;
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 
     .header_all p {
-        font-size: 9px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     .main-content {
-        height: 80px;
-        margin-bottom: 0%;
+        margin-bottom: 60px;
+        padding: 0 15px;
     }
 
-    a p {
-        display: none;
+    .cards ul {
+        margin-top: 15px;
+    }
+
+    .cards ul li a {
+        font-size: 14px;
+        padding: 8px 0;
+        display: inline-block;
     }
 }
