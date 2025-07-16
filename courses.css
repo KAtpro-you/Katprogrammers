@@ -195,6 +195,7 @@ body {
 .py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+    margin-top: 5%;
 }
 
 .py-16 {
@@ -719,6 +720,10 @@ button {
 
     .content1 {
         padding: 1rem;
+    }
+    .py-8{
+        margin-top: 30%;
+        margin-bottom: 20%;
     }
 
     pre {

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps - Kat-Programmers</title>
+    <meta name="description" content="Discover and explore the most popular development tools, frameworks, and applications used by developers worldwide.">
+    <link rel="stylesheet" href="apps.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.462.0/lucide.min.css">
+</head>
+<body>
+        <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.png" alt="KAT-PROGRAMMERS Logo">
+            <h2>KAT-PROGRAMMERS</h2>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="home.html" class="home"><span><i class="fa-solid fa-house"></i></span><p>Home</p></a></li>
+            <li><a href="#"><span><i class="fa-solid fa-film"></i></span><p>Videos</p></a></li>
+            <li><a href="#"><span><i class="fa-solid fa-newspaper"></i></span><p>News</p></a></li>
+            <li><a href="#"><span><i class="fa-brands fa-uncharted"></i></span><p>Courses</p></a></li>
+            <li><a href="apps.html"><span><i class="fa-brands fa-app-store"></i></span><p>App Store</p></a></li>
+            <div class="sidebar-bottom">
+                <li><a href="about.html"><span><i class="fa-solid fa-circle-user"></i></span><p>About</p></a></li>
+                <li><a onclick="logout()" style="cursor: pointer;"><span><i class="fa-solid fa-right-from-bracket"></i></span><p>Log Out</p></a></li>
+                
+            </div>
+        </ul>
+    </aside>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">Developer Tools & Applications</h1>
+            <p class="main-description"></p>
+        </header>
+        <div class="apps-grid" id="appsGrid"></div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>
