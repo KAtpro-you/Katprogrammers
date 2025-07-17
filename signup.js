@@ -2,7 +2,7 @@
 import { auth } from "./firebase-init.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
-document.querySelector('.form2 input[type="submit"]').addEventListener('click', async (event) => {
+document.querySelector('.form2 button[type="submit"]').addEventListener('click', async (event) => {
     event.preventDefault();
 
     const email = document.getElementById("signupEmail").value.trim();
