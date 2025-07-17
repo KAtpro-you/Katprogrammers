@@ -6,6 +6,16 @@
     <title>C++ Tutorial - KAT-PROGRAMMERS</title>
     <link rel="stylesheet" href="courses.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function logout() {
+      // Clear session or authentication data (e.g., localStorage, cookies)
+      localStorage.clear();
+      sessionStorage.clear();
+      
+      // Redirect to login page
+      window.location.replace("logout.html");
+    }
+    </script>
 </head>
 <body>
     <aside class="sidebar">
@@ -21,7 +31,7 @@
             <li><a href="#"><span><i class="fa-brands fa-app-store"></i></span><p>App Store</p></a></li>
             <div class="sidebar-bottom">
                 <li><a href="about.html"><span><i class="fa-solid fa-circle-user"></i></span><p>About</p></a></li>
-                <li><a href="index.html"><span><i class="fa-solid fa-right-from-bracket"></i></span><p>Log Out</p></a></li>
+                <li><a onclick="logout()"><span><i class="fa-solid fa-right-from-bracket"></i></span><p>Log Out</p></a></li>
             </div>
         </ul>
     </aside>

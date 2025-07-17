@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTutorials - Learn Programming with Video Tutorials</title>
+    <meta name="description" content="Master HTML, CSS, JavaScript, Python, MySQL, and C++ through carefully curated YouTube tutorials from industry experts.">
+    <link rel="stylesheet" href="tutorials.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function logout() {
+      // Clear session or authentication data (e.g., localStorage, cookies)
+      localStorage.clear();
+      sessionStorage.clear();
+      
+      // Redirect to login page
+      window.location.replace("logout.html");
+    }
+    </script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo.png" alt="KAT-PROGRAMMERS Logo">
+            <h2>KAT-PROGRAMMERS</h2>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="home.html" class="home"><span><i class="fa-solid fa-house"></i></span><p>Home</p></a></li>
+            <li><a href="tutorials.html"><span><i class="fa-solid fa-film"></i></span><p>Videos</p></a></li>
+            <li><a href="#"><span><i class="fa-solid fa-newspaper"></i></span><p>News</p></a></li>
+            <li><a href="#"><span><i class="fa-brands fa-uncharted"></i></span><p>Courses</p></a></li>
+            <li><a href="apps.html"><span><i class="fa-brands fa-app-store"></i></span><p>App Store</p></a></li>
+            <div class="sidebar-bottom">
+                <li><a href="about.html"><span><i class="fa-solid fa-circle-user"></i></span><p>About</p></a></li>
+                <li class="logout"><a onclick="logout()" style="cursor: pointer;"><span><i class="fa-solid fa-right-from-bracket"></i></span><p>Log Out</p></a></li>
+                
+            </div>
+        </ul>
+    </aside>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="nav-links desktop-nav">
+                    <a href="#html" class="nav-link">HTML</a>
+                    <a href="#css" class="nav-link">CSS</a>
+                    <a href="#javascript" class="nav-link">JavaScript</a>
+                    <a href="#python" class="nav-link">Python</a>
+                    <a href="#mysql" class="nav-link">MySQL</a>
+                    <a href="#cpp" class="nav-link">C++</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="mobile-nav hidden" id="mobileNav">
+                <div class="mobile-nav-links">
+                    <a href="#html" class="mobile-nav-link">HTML</a>
+                    <a href="#css" class="mobile-nav-link">CSS</a>
+                    <a href="#javascript" class="mobile-nav-link">JavaScript</a>
+                    <a href="#python" class="mobile-nav-link">Python</a>
+                    <a href="#mysql" class="mobile-nav-link">MySQL</a>
+                    <a href="#cpp" class="mobile-nav-link">C++</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="hero-gradient-text">Kat-Programmers</span>
+                    <br>
+                    with Video Tutorials
+                </h1>
+                
+                <p class="hero-description">
+                    Learn HTML, CSS, JavaScript, Python, MySQL, and C++ through 
+                    carefully curated YouTube tutorials from industry experts.
+                </p>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon"><img src="images/html logo- Websites, Applications and Software.jpg" alt=""></div>
+                        <div class="tech-name">HTML</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><img src="images/css.jpg" alt=""></div>
+                        <div class="tech-name">CSS</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><img src="images/JavaScript.jpg" alt=""></div>
+                        <div class="tech-name">JavaScript</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><img src="images/Python - MI PORTAL.jpg" alt=""></div>
+                        <div class="tech-name">Python</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><img src="images/MySQL Logo.jpg" alt=""></div>
+                        <div class="tech-name">MySQL</div>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon"><img src="images/C++.jpg" alt=""></div>
+                        <div class="tech-name">C++</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="scroll-down-btn" onclick="scrollToSection('#html')">
+            <svg class="scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19,12 12,19 5,12"></polyline>
+            </svg>
+        </button>
+    </section>
+
+    <!-- HTML Section -->
+    <section id="html" class="tech-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-icon"><img src="images/html logo- Websites, Applications and Software.jpg" alt=""></div>
+                <h2 class="section-title">HTML Fundamentals</h2>
+                <p class="section-description">Learn the building blocks of the web with HTML. Master semantic markup, forms, and modern HTML5 features.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" 
+                                title="HTML Crash Course For Absolute Beginners"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">1:00:41</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">HTML Crash Course For Absolute Beginners</h3>
+                        <p class="video-description">Complete HTML tutorial covering all the basics you need to know to get started with web development.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/fNcJuPIZ2WE" 
+                                title="HTML Forms Tutorial"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">37:27</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">HTML Forms Tutorial</h3>
+                        <p class="video-description">Learn how to create interactive forms with HTML including input types, validation, and accessibility.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ZThq93Yuwd0" 
+                                title="Semantic HTML Tutorial"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">25:17</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Semantic HTML Tutorial</h3>
+                        <p class="video-description">Master semantic HTML elements and learn how to write meaningful, accessible markup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS Section -->
+    <section id="css" class="tech-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-icon"><img src="images/css.jpg" alt=""></div>
+                <h2 class="section-title">CSS Styling</h2>
+                <p class="section-description">Transform your HTML with beautiful CSS. Learn layouts, animations, and responsive design techniques.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/yfoY53QXEnI" 
+                                title="CSS Crash Course For Absolute Beginners"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">1:25:06</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">CSS Crash Course For Absolute Beginners</h3>
+                        <p class="video-description">Complete CSS tutorial covering selectors, properties, layouts, and modern CSS techniques.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jV8B24rSN5o" 
+                                title="CSS Grid Crash Course"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">28:53</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">CSS Grid Crash Course</h3>
+                        <p class="video-description">Master CSS Grid layout system and create complex, responsive layouts with ease.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/JJSoEo8JSnc" 
+                                title="CSS Flexbox Tutorial"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">20:26</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">CSS Flexbox Tutorial</h3>
+                        <p class="video-description">Learn how to use Flexbox for flexible and responsive layout design in CSS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Section -->
+    <section id="javascript" class="tech-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-icon"><img src="images/JavaScript.jpg" alt=""></div>
+                <h2 class="section-title">JavaScript Programming</h2>
+                <p class="section-description">Bring your websites to life with JavaScript. Learn programming fundamentals and modern ES6+ features.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" 
+                                title="JavaScript Crash Course For Beginners"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">1:40:35</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">JavaScript Crash Course For Beginners</h3>
+                        <p class="video-description">Complete JavaScript tutorial covering variables, functions, objects, arrays, and DOM manipulation.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/NCwa_xi0Uuc" 
+                                title="Modern JavaScript ES6+ Features"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">45:37</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Modern JavaScript ES6+ Features</h3>
+                        <p class="video-description">Learn modern JavaScript features including arrow functions, destructuring, modules, and async/await.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/5fb2aPlgoys" 
+                                title="JavaScript DOM Manipulation"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">35:42</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">JavaScript DOM Manipulation</h3>
+                        <p class="video-description">Master DOM manipulation techniques to create interactive and dynamic web applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Python Section -->
+    <section id="python" class="tech-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-icon"><img src="images/Python - MI PORTAL.jpg" alt=""></div>
+                <h2 class="section-title">Python Programming</h2>
+                <p class="section-description">Start your programming journey with Python. Learn syntax, data structures, and object-oriented programming.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" 
+                                title="Python Tutorial for Beginners"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">6:14:07</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Python Tutorial for Beginners</h3>
+                        <p class="video-description">Complete Python tutorial covering basics, data types, control structures, and functions.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/JeznW_7DlB0" 
+                                title="Python Object Oriented Programming"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">44:21</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Python Object Oriented Programming</h3>
+                        <p class="video-description">Learn OOP concepts in Python including classes, inheritance, and polymorphism.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/R-HLU9Fl5ug" 
+                                title="Python Data Structures"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">52:18</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Python Data Structures</h3>
+                        <p class="video-description">Master Python's built-in data structures: lists, dictionaries, sets, and tuples.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MySQL Section -->
+    <section id="mysql" class="tech-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-icon"><img src="images/MySQL Logo.jpg" alt=""></div>
+                <h2 class="section-title">MySQL Database</h2>
+                <p class="section-description">Master database management with MySQL. Learn SQL queries, database design, and optimization techniques.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/7S_tz1z_5bA" 
+                                title="MySQL Tutorial for Beginners"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">3:10:44</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">MySQL Tutorial for Beginners</h3>
+                        <p class="video-description">Complete MySQL tutorial covering database creation, tables, queries, and relationships.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Cz3WcZLRaWc" 
+                                title="Advanced MySQL Queries"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">1:47:13</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Advanced MySQL Queries</h3>
+                        <p class="video-description">Learn advanced SQL techniques including joins, subqueries, and complex data manipulation.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/ztHopE5Wnpc" 
+                                title="MySQL Database Design"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">1:23:46</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">MySQL Database Design</h3>
+                        <p class="video-description">Master database design principles, normalization, and creating efficient database schemas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- C++ Section -->
+    <section id="cpp" class="tech-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-icon"><img src="images/C++.jpg" alt=""></div>
+                <h2 class="section-title">C++ Programming</h2>
+                <p class="section-description">Learn system programming with C++. Master memory management, OOP, and performance optimization.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/8jLOx1hD3_o" 
+                                title="C++ Programming Course - Beginner to Advanced"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">31:11:52</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">C++ Programming Course - Beginner to Advanced</h3>
+                        <p class="video-description">Complete C++ tutorial covering syntax, OOP, memory management, and STL containers.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/wN0x9eZLix4" 
+                                title="C++ Object Oriented Programming"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">1:31:40</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">C++ Object Oriented Programming</h3>
+                        <p class="video-description">Master OOP concepts in C++ including classes, inheritance, virtual functions, and polymorphism.</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/RRVYpIET_RU" 
+                                title="C++ STL Tutorial"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        <div class="video-duration">1:07:37</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">C++ STL Tutorial</h3>
+                        <p class="video-description">Learn the Standard Template Library including vectors, maps, algorithms, and iterators.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="tutorials.js"></script>
+</body>
+</html>
