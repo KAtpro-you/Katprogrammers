@@ -304,6 +304,7 @@ body.light-mode .sidebar-links li a span i {
     
     .container {
         padding: 1.5rem 1rem;
+        margin-bottom: 20%;
     }
         .sidebar {
         width: 100%;
@@ -335,24 +336,28 @@ body.light-mode .sidebar-links li a span i {
         margin-top: 0;
         height: auto;
         flex-direction: row;
-        justify-content: space-between;
         width: 100%;
+        font-size: 2px;
     }
 
     .sidebar-links li {
         flex: 1;
         text-align: center;
+        font-size: 2px;
+        height: 50px;
+        margin-top: 0;
     }
 
     .sidebar-links li a {
         flex-direction: column;
         gap: 5px;
         padding: 8px 4px;
-        font-size: 0.7rem;
+        font-size: 0.1rem;
         color: #dbd4d4e3;
         width: 100%;
         justify-content: center;
         align-items: center;
+        margin-top: 0;
     }
 
     body.light-mode .sidebar-links li a {
@@ -391,6 +396,9 @@ body.light-mode .sidebar-links li a span i {
     /* Disable hover effect on mobile */
     .sidebar:hover {
         width: 100%;
+    }
+    .logout{
+        display: none;
     }
 
 
