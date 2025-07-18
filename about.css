@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/fontawesome.min.css");
+:root{
+    --background: 0.0% 100%
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,16 +11,9 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Default Dark Mode */
-body {
-    background-color: #000;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    transition: background-color 0.3s ease, color 0.3s ease;
+body{
+    background-color: hsl(var(--background));
 }
-
 /* Light Mode */
 body.light-mode {
     background-color: #e0e0e0;

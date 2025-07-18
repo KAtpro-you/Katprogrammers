@@ -6,6 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --background: 222.2 84% 4.9%;
+}
 
 body {
     font-family: 'Inter', sans-serif;
@@ -25,7 +28,7 @@ body {
 }
 
 .bg-gradient-to-br {
-    background: linear-gradient(to bottom right, #000000, #0030b4, #000000);
+    background-color: hsl(var(--background)); 
 }
 
 .border-white\/10 {

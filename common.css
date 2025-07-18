@@ -8,10 +8,13 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+:root{
+    --background: 222.2 84% 4.9%;
+}
 
 /* Default Dark Mode */
 body {
-    background-color: #000;
+    background-color: hsl(var(--background));
     color: #fff;
     min-height: 100vh;
     display: flex;
@@ -149,7 +152,8 @@ header {
     left: 85px;
     width: calc(100% - 85px);
     height: 80px;
-    background-color: rgb(0, 60, 255);
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
     text-align: center;
     color: aliceblue;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);

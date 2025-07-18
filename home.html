@@ -29,6 +29,18 @@
       window.location.replace("logout.html");
     }
   </script>
+  <script>
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const heroSection = document.querySelector('.introduction');
+        const heroOverlay = document.querySelector('.content');
+        
+        if (heroSection && heroOverlay) {
+            const rate = scrolled * -0.5;
+            heroOverlay.style.transform = `translateY(${rate}px)`;
+        }
+    });
+  </script>
 </head>
 <body>
     <aside class="sidebar">
@@ -58,7 +70,7 @@
     </main>
 
     <div class="introduction">
-        <h1>MASTER PROGRAMMING</h1>
+        <h1 class="h1">MASTER PROGRAMMING</h1>
         <h1 class="headlanguage">LANGUAGES</h1>
         <p>Learn HTML, CSS, JavaScript, C++, Python, and MySQL with comprehensive tutorials, hands-on examples, and real-world projects. Start your programming journey today!</p>
     </div>
