@@ -18,9 +18,41 @@
       // Redirect to login page
       window.location.replace("logout.html");
     }
+        function activeChat() {
+        document.getElementById("chat-container").style.display = "block";
+    }
+    function closeChat() {
+        document.getElementById("chat-container").style.display = "none";
+    }
+    
+
     </script>
 </head>
 <body>
+        <div class="cont-btn" onclick="activeChat()"><i class="fa-brands fa-rocketchat fa-bounce"></i></div>
+    <div class="chat-container" id="chat-container">
+        <span onclick="closeChat()"><i class="fa-regular fa-circle-xmark"></i></span>
+        <form action="" id="contact-form">
+            <h1>Get In Touch</h1>
+            <div id="popup" class="popup"></div>
+            <p class="p">Names *</p>
+            <input type="text" id="names" placeholder="Full names" required><br>
+            <p class="p">E-mail *</p>
+            <input type="email" id="email" placeholder="E-mail" required> 
+            <p class="p">Subject *</p>
+            <input type="text" id="subject" placeholder="Subject" required><br>
+            <p class="p">Message *</p>
+            <textarea name="message" id="message" placeholder="Text a message..." required></textarea> 
+            <button type="submit">Send</button>
+            <p class="p1">* Feedback will get to you in less than 24hrs!</p>
+        </form>
+        <div class="con">
+            <p><a href="tel:+250792575986"><i class="fa-solid fa-phone"></i></a></p>
+            <p><a href="mailto:katprogrammers@gmail.com"><i class="fa-solid fa-envelope"></i></a></p>
+            <p><a href="https://www.instagram.com/kat_programmers"><i class="fa-brands fa-instagram"></i></a></p>
+        </div>
+    </div>
+
         <aside class="sidebar">
         <div class="sidebar-header">
             <img src="logo.png" alt="KAT-PROGRAMMERS Logo">
@@ -50,5 +82,11 @@
     </div>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="apps.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("6CSR1CAXwOHcVmcbZ"); // Replace with your actual public key
+</script>
+<script src="email.js"></script>
+
 </body>
 </html>
