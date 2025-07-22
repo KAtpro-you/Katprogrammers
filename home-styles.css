@@ -270,22 +270,4 @@
     }
 
 }
-@media screen and (min-width: 768px){
-    .chat-container{
-        width: 70%;
-        bottom: 0;
-    }
-    .content1 {
-        width: 90%;
-        margin: 5% auto;
-        display: block;
-        margin-left: 5%;
-    }
 
-    .content {
-        margin-top: 100px;
-        margin-bottom: 90px;
-        margin-left: 0;
-        text-align: center;
-    }
-}
