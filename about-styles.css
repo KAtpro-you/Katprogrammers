@@ -206,12 +206,47 @@ body.light-mode .header_all {
     margin: 5%;
     box-shadow: 10px 5px 5px rgb(63, 63, 63);
 }
+.cards button{
+    background-color: #0d200d;
+    border: 2px solid #0b4b0b;
+    border-radius: 5px;
+    margin-top: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.cards button:hover {
+    background-image: linear-gradient(45deg, #07e2ff, #00ff55);
+    color: black;
+    transition: all 0.3s;
+}
+.cards button p{
+    background-image: linear-gradient(45deg, #07e2ff, #00ff55);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 40px;
+}
+.cards button p:hover {
+    color: black;
+
+}
 
 .cards img {
     height: 5cm;
     width: 5cm;
+    border: #240e72 solid 3px;
     border-radius: 50%;
     margin-top: 2%;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+.cards img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+    border-color: transparent;
+    border-top: #7207ff solid 5px;
+    box-shadow: 0 10px 30px rgb(119, 0, 255);
 }
 
 .cards ul {
