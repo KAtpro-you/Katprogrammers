@@ -865,6 +865,30 @@ button {
     code {
         font-size: 0.75rem;
     }
+        .chat-container {
+        width: 100%;
+        margin: 0 auto;
+        bottom: 5%;
+    }
+    .chat-container form {
+        width: 80%;
+    }
+    .chat-container input, .chat-container textarea {
+        width: 100%;
+        height: 40px;
+    }
+    .chat-container button {
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;   
+    }
+    .cont-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 10%;
+    }
+
 }
 
 @media (min-width: 640px) {
