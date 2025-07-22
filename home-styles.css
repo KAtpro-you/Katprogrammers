@@ -246,7 +246,7 @@
         font-size: 30px;
     }
     .chat-container {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         bottom: 5%;
     }
@@ -270,7 +270,7 @@
     }
 
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1000px){
     .chat-container{
         width: 70%;
         bottom: 0;
