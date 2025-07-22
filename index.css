@@ -1,0 +1,340 @@
+body {
+            background-color: black;
+        }
+        form {
+            width: 25%;
+            font-size: 70%;
+            position: fixed;
+            right: 0;
+            bottom: 5%;
+            height: 80%;
+            text-align: center;
+        }
+        header {
+            position: fixed;
+            background-color: rgb(4, 4, 209);
+            padding: 0;
+            width: 100%;
+            top: 0;
+            left: 0;
+            font-size: 60%;
+            text-align: center;
+        }
+        header p {
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header h1 {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(255, 242, 0);
+        }
+        h6 {
+            color: aliceblue;
+        }
+        h3{
+            font-size: 30px;
+        }
+        input {
+            font-size: 15px;
+            background-color: black;
+            border: none;
+            color: aliceblue;
+            width: 90%;
+            height: 1cm;
+            margin-top: 5%;
+            border-radius: 5px;
+        }
+        input:focus {
+            padding: 10px;
+            transition: 0.3s ease-in-out;
+        }
+        form h4 {
+            color: darkgray;
+        }
+        fieldset {
+            font-size: 10px;
+            height: auto;
+            width: 90%;
+            border-radius: 10px;
+            background-color: rgba(37, 37, 37, 0.637);
+            color: aliceblue;
+            border-color: rgb(0, 0, 0);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow: 0px 0px 5px 5px rgb(1, 1, 66);
+        }
+        .set1 p{
+            font-size: 15px;
+        }
+        .set1 a {
+            color: gold;
+            text-decoration: none;
+        }
+        .set1 a:hover {
+            color: darkgoldenrod;
+        }
+        .set1 a button {
+            width: 32%;
+            cursor: pointer;
+            height: 0.7cm;
+            border-radius: 5px;
+            border: none;
+            font-size: 100%;
+        }
+        .set2 a button {
+            width: 60%;
+            height: 0.7cm;
+            font-size: 100%;
+            margin-top: 5%;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        .button1 {
+            background-color: aliceblue;
+        }
+        .button2 {
+            background-color: rgb(0, 136, 255);
+            color: aliceblue;
+        }
+        .button3 {
+            background-color: rgb(0, 0, 0);
+            color: aliceblue;
+        }
+        .button1:hover {
+            background-color: rgb(175, 180, 184);
+            box-shadow: none;
+            transition: 0.3s;
+        }
+        .button2:hover {
+            background-color: rgb(0, 101, 189);
+            color: rgb(184, 190, 196);
+            transition: 0.3s;
+        }
+        .button3:hover {
+            color: rgb(191, 197, 202);
+            transition: 0.3s;
+        }
+         .login {
+            background-image: linear-gradient(45deg, green, rgb(255, 208, 0));
+            color: black;
+            font-weight: bolder;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: none;
+        }
+        .login:hover {
+            background-image: linear-gradient(45deg, rgb(1, 87, 1), rgb(151, 136, 1));
+            color: rgb(0, 0, 0);
+            transition: 0.3s;
+        }
+        .video {
+            display: flex;
+            position: fixed;
+            z-index: -10;
+        }
+        video {
+            height: 100%;
+            width: 100%;
+            z-index: -10;
+        }
+        .tran {
+            background-color: rgba(0, 0, 0, 0.826);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            text-align: center;
+            color: aliceblue;
+        }
+        .tran div h2 {
+            margin-top: 3cm;
+        }
+        .tran div {
+            width: 70%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        footer {
+            width: 100%;
+            color: rgb(215, 215, 215);
+        }
+        .div1 {
+            width: 100%;
+            font-size: 70%;
+        }
+        div li {
+            display: inline-flex;
+        }
+        li a {
+            color: rgb(184, 172, 157);
+            text-decoration: solid;
+            margin-right: 3%;
+        }
+        .tran button {
+            background-image: linear-gradient(45deg, blue, rgb(255, 0, 217));
+            height: 1cm;
+            width: 30%;
+            color: aliceblue;
+            border: none;
+            border-radius: 10px;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        .tran button:hover {
+            box-shadow: 0px 0px 7px 7px blue;
+            transition: 0.3s ease;
+        }
+        .form2 {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 100;
+            background-color: rgba(0, 0, 0, 0.84);
+            text-align: center;
+        }
+        .form21 {
+            width: 30%;
+            margin-left: 35%;
+            z-index: 10000;
+        }
+        .error {
+            color: red;
+            font-size: 10px;
+            display: none;
+            margin-top: 10px;
+        }
+        .g_id_signin iframe{
+            margin-left: 20%;
+        }
+        /* Ensure Google button matches existing style */
+        .g_id_signin div[role=button] {
+            width: 60%;
+            height: 0.7cm;
+            font-size: 100%;
+            margin-top: 5%;
+            margin-left: 20%;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .g_id_signin div[role=button]:hover {
+            background-color: rgb(175, 180, 184);
+            box-shadow: none;
+            transition: 0.3s;
+        }
+
+        /* Media Queries */
+        @media (max-width: 720px) {
+            header {
+                padding: 1%;
+                text-align: center;
+                width: 100%;
+                position: relative;
+                background-color: transparent;
+            }
+            header h1 {
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .set2 a button, .set2 .g_id_signin div[role=button] {
+                width: 100%;
+                height: 0.7cm;
+                margin-top: 5%;
+                cursor: pointer;
+                border-radius: 5px;
+                border: none;
+            }
+            fieldset {
+                font-size: 90%;
+                width: auto;
+                background-color: rgb(36, 36, 36);
+                border-radius: 10px;
+                color: aliceblue;
+                box-shadow: 0px 0px 5px 5px rgba(172, 172, 172, 0.553);
+            }
+            fieldset h3 {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .set1 p {
+                font-size: 12px;
+            }
+            .set1 input {
+                width: 97%;
+                margin-top: 5%;
+                height: 0.7cm;
+                font-size: 90%;
+            }
+            .set1:focus {
+                border-color: rgb(30, 255, 0);
+                border: none;
+            }
+            input {
+                box-shadow: none;
+            }
+            input:focus {
+                padding: none;
+            }
+            form {
+                width: 100%;
+                position: relative;
+                text-align: center;
+                font-size: 90%;
+            }
+            h6 {
+                text-align: center;
+                font-size: 8px;
+            }
+            .set2 .button1, .set2 .g_id_signin div[role=button] {
+                background-color: aliceblue;
+            }
+            .set2 .button2 {
+                background-color: rgb(0, 136, 255);
+                color: aliceblue;
+            }
+            .set2 .button3 {
+                background-color: rgb(0, 0, 0);
+                color: aliceblue;
+            }
+            .set2 .button1:hover, .set2 .g_id_signin div[role=button]:hover {
+                background-color: rgb(180, 186, 190);
+                box-shadow: none;
+            }
+            .set2 .button2:hover {
+                background-color: rgb(0, 101, 189);
+                color: rgb(184, 190, 196);
+            }
+            .set2 .button3:hover {
+                color: rgb(191, 197, 202);
+            }
+            .set1 .login {
+                color: rgb(0, 0, 0);
+                font-weight: bolder;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .video video {
+                display: none;
+            }
+            .tran {
+                display: none;
+            }
+            .form21 {
+                width: 100%;
+                position: relative;
+                margin: 0%;
+                font-size: 70%;
+                margin-top: 30%;
+            }
+        }
