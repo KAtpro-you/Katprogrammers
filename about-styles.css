@@ -27,9 +27,9 @@
     position: fixed;
     bottom: 1%;
     right: 0.5%;
-    width: 1.5cm;
+    width: 6cm;
     height: 1.5cm;
-    border-radius: 50%;
+    border-radius: 30px;
     cursor: pointer;
     display: flex;
     font-size: 30px;
@@ -37,12 +37,25 @@
     justify-items: center;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(45deg, blue, rgb(247, 0, 255));
+    background-image: linear-gradient(45deg, rgb(0, 204, 255), rgb(4, 0, 255));
     z-index: 9999;
     transition: transform 0.3s ease-in-out;    
 }
+.cont-btn p{
+    margin-left: 10px;
+    color: white;
+    font-size: 15px; ;
+}
+.cont-btn img {
+    border-radius: 50%;
+    max-width: 30px;
+}
+.cont-btn .img1{
+    margin-left: -3%;
+    z-index: -1;
+}
 .cont-btn:hover{
-    background-image: linear-gradient(45deg, rgb(0, 0, 163), rgb(177, 0, 184));
+    background-image: linear-gradient(45deg, rgb(0, 152, 163), rgb(3, 0, 184));
     transition: 1s;
 }
 .chat-container{
@@ -347,4 +360,8 @@ body.light-mode .cards ul li a {
         font-size: 25px;
         bottom: 10%;
     }
+        .cont-btn p,img {
+        display: none; /* Hide text on smaller screens */
+    }
+
 }
