@@ -46,11 +46,36 @@
     function closeChat() {
         document.getElementById("chat-container").style.display = "none";
     }
-    
+        function OSpotify(){
+        list.style.display = "block";
+        Ospotify.style.display = "none";
+    }
+    function OspotifyOne(){
+        spotifyOne.style.display = "block";
+        list.style.display = "none";
+    }
+    function OspotifyTwo(){
+        spotifyTwo.style.display = "block";
+        list.style.display = "none";
+    }
+    function hideS(){
+        list.style.display = "none";
+        Ospotify.style.display = "flex";
+    }
+
   </script>
 
 </head>
 <body>
+        <div class="open-spotify" id="Ospotify" onclick="OSpotify()" title="Play spotify music"><p>Spotify</p> <i class="fa-brands fa-spotify"></i></div>
+    <div class="list" id="list">
+        <h3>Spotify <i class="fa-brands fa-spotify"></i> <i class="fa-solid fa-xmark" style="color: #ff0000; position: absolute; text-align: right; top: 2%; right: 2%; font-size: 20px; cursor: pointer;" onclick="hideS()"></i></h3>
+        <div class="l1" onclick="OspotifyTwo()">Funk! and Aura <i class="fa-solid fa-arrow-right"></i></div>
+        <div class="l1" onclick="OspotifyOne()">Working Motivation <i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    <iframe class="spotify" id="spotifyOne" src="https://open.spotify.com/embed/playlist/7qD457I8FCpFXK1lAFohOc?utm_source=generator" width="20%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe class="spotify" id="spotifyTwo" src="https://open.spotify.com/embed/playlist/3UN0tKYCRxeUP7K3q7KKkV?utm_source=generator" width="20%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
     <div class="cont-btn" id="activechat" onclick="activeChat()"><i class="fa-brands fa-rocketchat fa-bounce"></i> <p>Get in Touch</p><img src="images/founder/arsene.jpg" alt=""><img class="img1" src="images/founder/donald.JPEG" alt=""></div>
     <div class="chat-container" id="chat-container">
         <span onclick="closeChat()"><i class="fa-regular fa-circle-xmark"></i></span>
