@@ -46,22 +46,31 @@
     function closeChat() {
         document.getElementById("chat-container").style.display = "none";
     }
-        function OSpotify(){
+      function OSpotify(){
         list.style.display = "block";
         Ospotify.style.display = "none";
     }
     function OspotifyOne(){
         spotifyOne.style.display = "block";
         list.style.display = "none";
+        closeS.style.display = "flex"
     }
     function OspotifyTwo(){
         spotifyTwo.style.display = "block";
         list.style.display = "none";
+        closeS.style.display = "flex"
     }
     function hideS(){
         list.style.display = "none";
         Ospotify.style.display = "flex";
     }
+    function closeC(){
+        spotifyOne.style.display = "none";
+        spotifyTwo.style.display = "none";
+        Ospotify.style.display = "flex";
+        closeS.style.display = "none"
+    }
+
 
   </script>
 
@@ -73,6 +82,7 @@
         <div class="l1" onclick="OspotifyTwo()">Funk! and Aura <i class="fa-solid fa-arrow-right"></i></div>
         <div class="l1" onclick="OspotifyOne()">Working Motivation <i class="fa-solid fa-arrow-right"></i></div>
     </div>
+    <div class="spotify-container" id="closeS" onclick="closeC()"><i class="fa-solid fa-xmark"></i></div>
     <iframe class="spotify" id="spotifyOne" src="https://open.spotify.com/embed/playlist/7qD457I8FCpFXK1lAFohOc?utm_source=generator" width="20%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     <iframe class="spotify" id="spotifyTwo" src="https://open.spotify.com/embed/playlist/3UN0tKYCRxeUP7K3q7KKkV?utm_source=generator" width="20%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
