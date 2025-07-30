@@ -228,6 +228,63 @@
     color: white;
     font-size: 70px;
 }
+.open-spotify{
+    cursor: pointer;
+    position: fixed;
+    left: 5%;
+    bottom: 0;
+    width: 5%;
+    height: 5%;
+    background-image: linear-gradient(250deg, rgb(247, 0, 255), rgb(9, 9, 32));
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    justify-items: flex-start;
+    place-items: center;
+    font-weight: bolder;
+}
+.open-spotify:hover{
+    background-image: linear-gradient(250deg, rgb(247, 0,255, 0.4), rgb(9, 9, 32));
+    color: #c5c5c5;
+    transition: 0.3s;
+}
+.spotify{
+    border-radius:12px; position: fixed; left: 5%; bottom: 0; z-index: 1; display: none;
+}
+.list{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 1;
+    padding-top: 10px;
+    transition: all 0.3s ease-in;
+    background-image: linear-gradient(45deg, rgb(189, 0, 206), rgb(1, 194, 201));
+}
+.list h3{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    place-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.list .l1{
+    display: flex;
+    width: 100%;
+    height: 1.4cm;
+    justify-content: space-evenly;
+    place-items: center;
+    cursor: pointer;
+}
+.list .l1:hover{
+    background-color: #3a1e5365;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
@@ -284,6 +341,29 @@
     }
     .cont-btn p,img {
         display: none; /* Hide text on smaller screens */
+    }
+        .open-spotify{
+        display: flex;
+        bottom: 10%;
+        left: 0;
+        width: 10%;
+        z-index: 1;
+        font-size: 30px;
+    }
+    .open-spotify p{
+        display: none;
+    }
+    .list{
+        width: 50%;
+        left: 0;
+        bottom: 7%;
+        background-image: linear-gradient(45deg, rgba(189, 0, 206, 0.603), rgba(1, 194, 201, 0.603));
+    }
+    .spotify{
+        position: fixed;
+        width: 70%;
+        bottom: 7%;
+        left: 0;
     }
 
 }
