@@ -346,9 +346,11 @@
         display: flex;
         bottom: 10%;
         left: 0;
-        width: 10%;
+        width: 1.5cm;
+        height: 1.5cm;
         z-index: 1;
         font-size: 30px;
+        border-radius: 50%;
     }
     .open-spotify p{
         display: none;
