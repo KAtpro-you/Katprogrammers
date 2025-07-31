@@ -243,6 +243,7 @@
     place-items: center;
     font-weight: bolder;
     transition: all 0.3s ease-in;
+    z-index: 1;
 }
 .open-spotify:hover{
     background-image: linear-gradient(250deg, rgb(247, 0,255, 0.4), rgb(9, 9, 32));
