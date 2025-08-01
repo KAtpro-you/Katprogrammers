@@ -12,7 +12,18 @@
     <title>KAT-PROGRAMMERS</title>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+<script>
+  document.getElementById("logoutBtn").addEventListener("click", function (e) {
+  e.preventDefault(); // Prevent default if using <a> link
+  firebase.auth().signOut().then(() => {
+    sessionStorage.clear();                  // Clear all session data for safety
+    window.location.replace("logout.html");  // Use replace() to avoid adding login to history
+  }).catch((error) => {
+    console.error("Logout error:", error);
+  });
+});
 
+</script>
 <script>
   // Your Firebase config
   const firebaseConfig = {
@@ -158,18 +169,7 @@
             <div class="sidebar-bottom">
                 <li><a href="about.html"><span><i class="fa-solid fa-circle-user"></i></span><p>About</p></a></li>
                 <li><a href="#" style="cursor: pointer;" id="logoutBtn"><span><i class="fa-solid fa-right-from-bracket"></i></span><p>Log Out</p></a></li>
-                <script>
-  document.getElementById("logoutBtn").addEventListener("click", function (e) {
-  e.preventDefault(); // Prevent default if using <a> link
-  firebase.auth().signOut().then(() => {
-    sessionStorage.clear();                  // Clear all session data for safety
-    window.location.replace("logout.html");  // Use replace() to avoid adding login to history
-  }).catch((error) => {
-    console.error("Logout error:", error);
-  });
-});
-
-</script>
+                
 
             </div>
         </ul>
