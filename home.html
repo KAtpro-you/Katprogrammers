@@ -17,7 +17,7 @@
   e.preventDefault(); // Prevent default if using <a> link
   firebase.auth().signOut().then(() => {
     sessionStorage.clear();                  // Clear all session data for safety
-    window.location.replace("https://katprogrammers.vercel.app/");  // Use replace() to avoid adding login to history
+    window.location.href = "https://katprogrammers.vercel.app/";  // Use replace() to avoid adding login to history
   }).catch((error) => {
     console.error("Logout error:", error);
   });
