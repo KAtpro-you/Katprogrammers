@@ -163,7 +163,7 @@
   e.preventDefault(); // Prevent default if using <a> link
   firebase.auth().signOut().then(() => {
     sessionStorage.clear();                  // Clear all session data for safety
-    window.location.replace("login.html");  // Use replace() to avoid adding login to history
+    window.location.replace("logout.html");  // Use replace() to avoid adding login to history
   }).catch((error) => {
     console.error("Logout error:", error);
   });
