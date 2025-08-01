@@ -1,16 +1,6 @@
 // login.js
 import { auth } from "./firebase-init.js";
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Login successful
-    sessionStorage.setItem("userLoggedIn", "true"); // Set flag
-    window.location.href = "home.html";            // Redirect to home
-  })
-  .catch((error) => {
-    // Handle login errors here
-    alert(error.message);
-  });
 
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -21,6 +11,11 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
+
+    // Set sessionStorage flag AFTER successful login
+    sessionStorage.setItem("userLoggedIn", "true");
+
+    // Redirect to home page
     window.location.href = "home.html";
   } catch (err) {
     errorBox.textContent = "❌ " + err.message;
