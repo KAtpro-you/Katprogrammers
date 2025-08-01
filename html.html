@@ -8,6 +8,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="logo.png">
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+<script>
+  // Your Firebase config
+  const firebaseConfig = {
+    // ... your config here ...
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  // Check sessionStorage and Firebase Auth status
+  if (sessionStorage.getItem("userLoggedIn") !== "true") {
+    // Not logged in, redirect to login page
+    window.location.href = "https://katprogrammers.vercel.app/";
+  } else {
+    // Optional: double-check Firebase auth state in case sessionStorage was tampered with
+    firebase.auth().onAuthStateChanged(user => {
+      if (!user) {
+        // User not logged in via Firebase, clear session and redirect
+        sessionStorage.removeItem("userLoggedIn");
+        window.location.href = "https://katprogrammers.vercel.app/";
+      }
+    });
+  }
+
+  // Optional: prevent back button caching
+  window.onpageshow = function(event) {
+    if (event.persisted || window.performance.navigation.type === 2) {
+      window.location.reload();
+    }
+  };
+</script>
+
     <script>
         function logout() {
       // Clear session or authentication data (e.g., localStorage, cookies)
