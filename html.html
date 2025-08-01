@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>HTML Tutorial - KAT-PROGRAMMERS</title>
     <link rel="stylesheet" href="courses.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -100,17 +103,18 @@
             <li><a href="apps.html"><span><i class="fa-brands fa-app-store"></i></span><p>App Store</p></a></li>
             <div class="sidebar-bottom">
                 <li><a href="about.html"><span><i class="fa-solid fa-circle-user"></i></span><p>About</p></a></li>
-                <li><a onclick="logout()" id="logoutBtn"><span><i class="fa-solid fa-right-from-bracket"></i></span><p>Log Out</p></a></li>
+                <li><a id="logoutBtn"><span><i class="fa-solid fa-right-from-bracket"></i></span><p>Log Out</p></a></li>
                 <script>
   document.getElementById("logoutBtn").addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent default if using <a> link
-    firebase.auth().signOut().then(() => {
-      sessionStorage.removeItem("userLoggedIn");
-      window.location.href = "login.html";
-    }).catch((error) => {
-      console.error("Logout error:", error);
-    });
+  e.preventDefault(); // Prevent default if using <a> link
+  firebase.auth().signOut().then(() => {
+    sessionStorage.clear();                  // Clear all session data for safety
+    window.location.replace("login.html");  // Use replace() to avoid adding login to history
+  }).catch((error) => {
+    console.error("Logout error:", error);
   });
+});
+
 </script>
 
             </div>
