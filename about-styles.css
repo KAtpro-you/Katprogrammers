@@ -360,8 +360,11 @@ body.light-mode .cards ul li a {
         font-size: 25px;
         bottom: 10%;
     }
-        .cont-btn p,img {
+    .cont-btn p{
         display: none; /* Hide text on smaller screens */
+    }
+    .cont-btn img{
+        display: none;
     }
 
 }
